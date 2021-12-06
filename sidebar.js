@@ -1,5 +1,5 @@
 const sidebars = {
-	defaultSidebar: [
+	docs: [
 		{
 			type: 'doc',
 			id: 'intro',
@@ -40,6 +40,28 @@ const sidebars = {
 					label: 'Template syntax'
 				}
 			]
+		}
+	],
+	community: [
+		{
+			type: 'doc',
+			id: 'community/contributing',
+			label: 'Contributing'
+		},
+		{
+			type: 'doc',
+			id: 'community/support',
+			label: 'Support'
+		},
+		{
+			type: 'doc',
+			id: 'community/browser-support',
+			label: 'Browser support'
+		},
+		{
+			type: 'link',
+			href: 'https://github.com/yoriiis/costro/blob/main/CHANGELOG.md',
+			label: 'Changelog'
 		}
 	]
 }

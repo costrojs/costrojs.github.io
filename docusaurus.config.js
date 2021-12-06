@@ -16,8 +16,10 @@ const config = {
 			'@docusaurus/preset-classic',
 			{
 				docs: {
-					sidebarPath: require.resolve('./sidebars.js'),
-					editUrl: 'https://github.com/yoriiis/costro/edit/dev-docs'
+					editUrl: 'https://github.com/yoriiis/costro/edit/dev-docs',
+					sidebarPath: require.resolve('./sidebar.js'),
+					path: 'docs',
+					routeBasePath: 'docs'
 				},
 				theme: {
 					customCss: require.resolve('./src/css/custom.css')
@@ -37,21 +39,21 @@ const config = {
 		navbar: {
 			hideOnScroll: true,
 			title: 'Costro',
-			// logo: {
-			//   alt: "Costro",
-			//   src: 'img/logo.svg',
-			// },
 			items: [
 				{
+					to: 'docs/intro',
 					type: 'doc',
 					docId: 'intro',
 					position: 'left',
 					label: 'Docs'
 				},
 				{
-					href: 'https://github.com/yoriiis/costro/blob/main/CHANGELOG.md',
-					label: 'Changelog',
-					position: 'right'
+					to: 'community/contributing',
+					type: 'doc',
+					docId: 'community/contributing',
+					position: 'left',
+					label: 'Community',
+					activeBaseRegex: `/community/`
 				},
 				{
 					href: 'https://github.com/yoriiis/costro',
