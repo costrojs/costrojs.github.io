@@ -1,0 +1,27 @@
+module.exports = {
+	arrowParens: 'always',
+	overrides: [
+		{
+			files: '*.md',
+			options: {
+				proseWrap: 'preserve',
+				semi: true,
+				singleQuote: true,
+				tabWidth: 2,
+				useTabs: false,
+				trailingComma: 'none'
+			}
+		},
+		{
+			files: '*.html',
+			options: {
+				printWidth: 500
+			}
+		}
+	],
+	printWidth: 100,
+	semi: false,
+	singleQuote: true,
+	trailingComma: 'none',
+	useTabs: true
+}
