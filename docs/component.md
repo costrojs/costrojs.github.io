@@ -10,8 +10,6 @@ import TabItem from '@theme/TabItem';
 import BrowserWindow from '@site/src/components/BrowserWindow';
 ```
 
-<!-- markdownlint-disable MD041 -->
-
 ## Function and Class Components
 
 The easiest way to define a component is to write a JavaScript function. The component can also be written as an ES6 class and extends the class `Component` from `Costro`. This offers more features which you will discover below.
@@ -128,6 +126,8 @@ For example, the following code displays "Hello, John Doe" on the page.
 </BrowserWindow>
 ```
 
+<br />
+
 Try it on [CodeSandbox](https://codesandbox.io/s/costro-props-9noop).
 
 ## Lifecycle hooks
@@ -238,6 +238,8 @@ The above example updates the UI every second.
     </h2>
 </BrowserWindow>
 ```
+
+<br />
 
 Try it on [CodeSandbox](https://codesandbox.io/s/costro-clock-4tilh).
 

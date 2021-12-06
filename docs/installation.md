@@ -3,7 +3,8 @@ id: installation
 title: Installation
 ---
 
-<!-- markdownlint-disable MD041 -->
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 Costro can be integrated into a project in several ways depending on the needs.
 
@@ -33,11 +34,28 @@ The files can be browsed and downloaded from the [jsDeliver CDN](https://www.jsd
 
 npm is the recommended installation method when building applications with Costro. It works well with module bundlers such as [webpack](https://webpack.js.org) or [Rollup](https://rollupjs.org).
 
+<Tabs
+defaultValue="npm"
+values={[
+{ label: 'npm', value: 'npm', },
+{ label: 'Yarn', value: 'yarn', }
+]
+}>
+<TabItem value="npm">
+
 ```bash
 npm install costro
-# or
+```
+
+</TabItem>
+<TabItem value="yarn">
+
+```bash
 yarn add costro
 ```
+
+</TabItem>
+</Tabs>
 
 :::info
 System requirements: Node.js v12 or later

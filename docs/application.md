@@ -3,6 +3,9 @@ id: application
 title: Application
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 ```mdx-code-block
 import BrowserWindow from '@site/src/components/BrowserWindow';
 ```
@@ -41,6 +44,8 @@ const app = new Costro.Application();
     <h2>Home</h2>
 </BrowserWindow>
 ```
+
+<br />
 
 Try it on [CodeSandbox](https://codesandbox.io/s/costro-application-instance-u1gqx).
 

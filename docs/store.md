@@ -3,8 +3,6 @@ id: store
 title: Store
 ---
 
-<!-- markdownlint-disable MD041 -->
-
 The component store is a [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) object declared locally in the component itself as a class property. Components can view, set and get data in their store and also get data from another component. The store is accessible in the whole context of the Component class, including the lifecycle hooks.
 
 ## Store property
@@ -38,7 +36,7 @@ class Home extends Component {
 
 Add data to the store of the component.
 
-:::tip
+:::info
 When the key already exist in the Map object, Costro will perform deep cloning of the data.
 :::
 

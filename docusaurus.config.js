@@ -17,8 +17,7 @@ const config = {
 			{
 				docs: {
 					sidebarPath: require.resolve('./sidebars.js'),
-					// Please change this to your repo.
-					editUrl: 'https://github.com/yoriiis/costro/edit/dev-docs/docs'
+					editUrl: 'https://github.com/yoriiis/costro/edit/dev-docs'
 				},
 				theme: {
 					customCss: require.resolve('./src/css/custom.css')
@@ -27,7 +26,16 @@ const config = {
 		]
 	],
 	themeConfig: {
+		announcementBar: {
+			backgroundColor: '#ff236d',
+			id: 'announcementBar',
+			content: `⭐️&nbsp;&nbsp;If you like <strong>Costro</strong>, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/yoriiis/costro">GitHub</a>`
+		},
+		colorMode: {
+			respectPrefersColorScheme: true
+		},
 		navbar: {
+			hideOnScroll: true,
 			title: 'Costro',
 			// logo: {
 			//   alt: "Costro",

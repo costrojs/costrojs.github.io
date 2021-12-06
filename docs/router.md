@@ -6,8 +6,6 @@ title: Router
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-<!-- markdownlint-disable MD041 -->
-
 ## Getting started
 
 ```js

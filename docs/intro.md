@@ -3,8 +3,6 @@ id: intro
 title: Introduction
 ---
 
-<!-- markdownlint-disable MD041 -->
-
 ## What is Costro?
 
 Costro is a new lightweight framework with a different approach: helping you **build fast web applications** with a **low level of dependency**. If you are concerned about your app's loading performance, this library makes sense as it is extremely lightweight compared to the competition _(only 3 KB)_.
