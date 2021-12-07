@@ -1,14 +1,11 @@
 ---
 id: application
 title: Application
+hide_table_of_contents: true
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-
-```mdx-code-block
-import BrowserWindow from '@site/src/components/BrowserWindow';
-```
 
 <!-- markdownlint-disable MD041 -->
 
@@ -38,14 +35,6 @@ const app = new Costro.Application();
 ```
 
 :::
-
-```mdx-code-block
-<BrowserWindow url="http://localhost:3000/#/">
-    <h2>Home</h2>
-</BrowserWindow>
-```
-
-<br />
 
 Try it on [CodeSandbox](https://codesandbox.io/s/costro-application-instance-u1gqx).
 

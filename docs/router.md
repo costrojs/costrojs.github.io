@@ -312,7 +312,7 @@ Try it on [CodeSandbox](https://codesandbox.io/s/costro-history-yd79x).
 When using `history` mode, you need to add a fallback route to your server. If the URL does not match any static element, it must serve the same `index.html` page that your application resides on.
 :::
 
-### Example server configurations
+### Server configurations
 
 The following examples assume you are serving your app from the root folder. If you are deploying to a subfolder, you need to adjust the examples below to use the subfolder path instead of the root folder path (e.g. for Apache, replace `RewriteBase /` with `RewriteBase /subfolder-path/`).
 

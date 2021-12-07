@@ -183,14 +183,9 @@ ESLint provide support for JSX syntax with the `eslint-plugin-react` package.
 npm install eslint@7 eslint-plugin-react --save-dev
 ```
 
-When using ESLint and JSX outside of React/Preact, you needs to:
+When using ESLint and JSX outside of React/Preact, you needs to update the following rules.
 
-- Disable `react/display-name`, `react/jsx-key`, `react/prop-types` rules and `version` setting.
-- Declare the `pragma` and `fragment`
-
-Example of the ESLint configuration:
-
-```json title=".eslintrc.json"
+```json title=".eslintrc.json" {5,6,7,12,13,14}
 {
   "extends": ["plugin:react/recommended"],
 

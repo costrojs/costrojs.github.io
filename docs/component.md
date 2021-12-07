@@ -185,9 +185,9 @@ class Welcome extends Component {
 }
 ```
 
-## Update the view
+## State changes
 
-Updating the view manually during state changes is much faster than using a virtual DOM with diff algorithms.
+Updating the view manually during state changes is much faster than using a virtual DOM with diff algorithms. The following example shows how to update the DOM on the `afterRender` event.
 
 ```js title="src/components/clock.js"
 class Clock extends Component {
@@ -212,21 +212,9 @@ class Clock extends Component {
 }
 ```
 
-The above example updates the UI every second.
-
-```mdx-code-block
-<BrowserWindow url="http://localhost:3000/#/">
-    <h2>
-        It is <span id="time">{new Date().toLocaleTimeString()}</span>.
-    </h2>
-</BrowserWindow>
-```
-
-<br />
-
 Try it on [CodeSandbox](https://codesandbox.io/s/costro-clock-4tilh).
 
-## Component route data
+## Route data
 
 The component class exposes the `route` data as a class property.
 

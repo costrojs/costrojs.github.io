@@ -13,6 +13,7 @@ const sidebars = {
 		{
 			type: 'category',
 			label: 'Guide',
+			collapsed: false,
 			items: [
 				{
 					type: 'doc',
