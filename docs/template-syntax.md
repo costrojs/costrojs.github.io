@@ -124,7 +124,7 @@ class Home extends Component {
 }
 ```
 
-### SVG inside JSX
+### SVG
 
 Costro applies the SVG attributes as they are written. This means that you can copy and paste unmodified SVG directly into your code and have them work right away.
 
@@ -148,7 +148,7 @@ npm install @babel/plugin-transform-react-jsx --save-dev
 
 Then, update the Babel configuration to register the plugin and the pragmas.
 
-```json title="babel.config.json"
+```json title="babel.config.json" {6,7}
 {
   "plugins": [
     [

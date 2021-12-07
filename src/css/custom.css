@@ -20,3 +20,19 @@
 html[data-theme='dark'] .docusaurus-highlight-code-line {
 	background-color: rgba(0, 0, 0, 0.3);
 }
+
+.header-githubLink:hover {
+	opacity: 0.6;
+}
+
+.header-githubLink:before {
+	content: '';
+	width: 24px;
+	height: 24px;
+	display: flex;
+	background: url('../svgs/github-black.svg') no-repeat;
+}
+
+html[data-theme='dark'] .header-githubLink:before {
+	background: url('../svgs/github-white.svg') no-repeat;
+}

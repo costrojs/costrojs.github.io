@@ -41,28 +41,6 @@ const sidebars = {
 				}
 			]
 		}
-	],
-	community: [
-		{
-			type: 'doc',
-			id: 'community/contributing',
-			label: 'Contributing'
-		},
-		{
-			type: 'doc',
-			id: 'community/support',
-			label: 'Support'
-		},
-		{
-			type: 'doc',
-			id: 'community/browser-support',
-			label: 'Browser support'
-		},
-		{
-			type: 'link',
-			href: 'https://github.com/yoriiis/costro/blob/main/CHANGELOG.md',
-			label: 'Changelog'
-		}
 	]
 }
 

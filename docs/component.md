@@ -65,7 +65,7 @@ You can transform a function component to a class component with the following s
 
 ## Props
 
-Props are inputs accepted by components.
+Props are inputs accepted by components and [injected from the route](router#route-props).
 
 The function component accepts a single `props` object argument with data as a parameter. The class component has the same principle except that the `props` are exposed in the context of the class with `this.props`.
 
@@ -101,24 +101,7 @@ If you implement the `constructor()` function on the class component, you should
 </TabItem>
 </Tabs>
 
-**Inject props in the route**
-
-```js
-new App({
-  target: document.querySelector('#app'),
-  routes: [
-    {
-      path: '/',
-      component: Home,
-      props: {
-        name: 'John Doe'
-      }
-    }
-  ]
-});
-```
-
-For example, the following code displays "Hello, John Doe" on the page.
+For example, with the route props `{ name: 'John Doe' }`, the above example displays "Hello, John Doe" on the page.
 
 ```mdx-code-block
 <BrowserWindow url="http://localhost:3000/#/">
@@ -142,7 +125,7 @@ Try it on [CodeSandbox](https://codesandbox.io/s/costro-lifecycle-5v9d8).
 
 The `beforeRender()` method runs before the component output has been rendered to the DOM.
 
-```js title="src/components/welcome.js"
+```js title="src/components/welcome.js" {2,3,4}
 class Welcome extends Component {
   beforeRender() {
     // The component is not yet rendered to the DOM
@@ -158,7 +141,7 @@ class Welcome extends Component {
 
 The `afterRender()` method runs after the component output has been rendered to the DOM.
 
-```js title="src/components/welcome.js"
+```js title="src/components/welcome.js" {6,7,8}
 class Welcome extends Component {
   render() {
     return <h2>Welcome</h2>;
@@ -174,7 +157,7 @@ class Welcome extends Component {
 
 The `beforeDestroy()` method runs before the component has been removed to the DOM.
 
-```js title="src/components/welcome.js"
+```js title="src/components/welcome.js" {2,3,4}
 class Welcome extends Component {
   beforeDestroy() {
     // The component is not yet removed from the DOM
@@ -190,7 +173,7 @@ class Welcome extends Component {
 
 The `afterDestroy()` method runs after the component has been removed to the DOM.
 
-```js title="src/components/welcome.js"
+```js title="src/components/welcome.js" {6,7,8}
 class Welcome extends Component {
   render() {
     return <h2>Welcome</h2>;

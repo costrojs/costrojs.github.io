@@ -12,7 +12,7 @@ import BrowserWindow from '@site/src/components/BrowserWindow';
 
 <!-- markdownlint-disable MD041 -->
 
-## Creating an Application Instance
+## Create the application instance
 
 Every Costro application starts by creating a new application instance with the `App` class:
 
@@ -49,7 +49,7 @@ const app = new Costro.Application();
 
 Try it on [CodeSandbox](https://codesandbox.io/s/costro-application-instance-u1gqx).
 
-### Signature
+**Signature**
 
 <!-- prettier-ignore -->
 ```ts
@@ -70,7 +70,7 @@ type RouteConfig = {
 };
 ```
 
-### Parameters
+**Parameters**
 
 | Parameter |      Type       | Description                                    |
 | --------- | :-------------: | ---------------------------------------------- |

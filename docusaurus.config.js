@@ -8,7 +8,6 @@ const config = {
 	baseUrl: '/costro/',
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
-	//   favicon: "img/favicon.ico",
 	organizationName: 'yoriiis',
 	projectName: 'costro',
 	presets: [
@@ -17,7 +16,7 @@ const config = {
 			{
 				docs: {
 					editUrl: 'https://github.com/yoriiis/costro/edit/dev-docs',
-					sidebarPath: require.resolve('./sidebar.js'),
+					sidebarPath: require.resolve('./sidebars/sidebar-docs.js'),
 					path: 'docs',
 					routeBasePath: 'docs'
 				},
@@ -28,6 +27,10 @@ const config = {
 		]
 	],
 	themeConfig: {
+		tableOfContents: {
+			minHeadingLevel: 2,
+			maxHeadingLevel: 5
+		},
 		announcementBar: {
 			backgroundColor: '#ff236d',
 			id: 'announcementBar',
@@ -48,17 +51,29 @@ const config = {
 					label: 'Docs'
 				},
 				{
-					to: 'community/contributing',
-					type: 'doc',
-					docId: 'community/contributing',
-					position: 'left',
+					type: 'dropdown',
 					label: 'Community',
-					activeBaseRegex: `/community/`
+					position: 'left',
+					items: [
+						{
+							label: 'GitHub Discussions',
+							href: 'https://github.com/yoriiis/costro/discussions'
+						},
+						{
+							label: 'Contribution Guide',
+							href: 'https://github.com/yoriiis/costro/blob/main/CONTRIBUTING.md'
+						},
+						{
+							label: 'Changelog',
+							href: 'https://github.com/yoriiis/costro/blob/main/CHANGELOG.md'
+						}
+					]
 				},
 				{
 					href: 'https://github.com/yoriiis/costro',
-					label: 'GitHub',
-					position: 'right'
+					position: 'right',
+					className: 'header-githubLink',
+					'aria-label': 'GitHub repository'
 				}
 			]
 		},
@@ -74,8 +89,7 @@ const config = {
 			appId: 'BH4D9OD16A',
 			apiKey: 'YOUR_SEARCH_API_KEY',
 			indexName: 'YOUR_INDEX_NAME',
-			contextualSearch: true,
-			searchParameters: {}
+			contextualSearch: true
 		}
 	}
 }

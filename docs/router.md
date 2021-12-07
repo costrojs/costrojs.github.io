@@ -8,21 +8,59 @@ import TabItem from '@theme/TabItem';
 
 ## Getting started
 
-```js
-// 1. Define components.
-// The "component" can either be a Function component or a Class Component.
-// These can be imported from other files.
-function Home() {
-  return <h2>Home</h2>;
+### Define components
+
+The components can either be a [Function or a Class Component](component.md#function-and-class-components). These can be imported from other files. You can use code shared between them, like the `Navigation` function below.
+
+```js title="src/app.js" {1,10,21}
+function Navigation() {
+  return (
+    <div>
+      <Link to="/">Home</Link>
+      <Link to="/about">About</Link>
+    </div>
+  );
 }
-class About extends Component {
+
+class Home extends Component {
   render() {
-    return <h2>About</h2>;
+    return (
+      <div>
+        <Navigation />
+        <h2>Home</h2>
+      </div>
+    );
   }
 }
 
-// 2. Define routes.
-// Each route should map to a component.
+class About extends Component {
+  render() {
+    return (
+      <div>
+        <Navigation />
+        <h2>About</h2>
+      </div>
+    );
+  }
+}
+```
+
+### Define routes
+
+Route are defined in an array of route object. Each route should map to a component.
+
+**Signature**
+
+<!-- prettier-ignore -->
+```ts
+type RouteConfig = {
+  path: string
+  component: Component
+  props: any
+};
+```
+
+```js title="src/app.js" {3,4,7,8}
 const routes = [
   {
     path: '/',
@@ -33,8 +71,13 @@ const routes = [
     component: About
   }
 ];
+```
 
-// 3. Create the application instance and pass the routes
+### Create the application instance
+
+Create the [application instance](application#creating-an-application-instance) and pass the routes in parameters.
+
+```js title="src/app.js" {3}
 const app = new App({
   target: document.querySelector('#app'),
   routes
@@ -42,6 +85,25 @@ const app = new App({
 ```
 
 Try it on [CodeSandbox](https://codesandbox.io/s/costro-router-x8j4f).
+
+## Route props
+
+Inject props in the route. Then, props are exposed in the [component props](component#props).
+
+```js title="src/app.js" {7,8,9}
+new App({
+  target: document.querySelector('#app'),
+  routes: [
+    {
+      path: '/',
+      component: Home,
+      props: {
+        name: 'John Doe'
+      }
+    }
+  ]
+});
+```
 
 ## Dynamic Routing
 
@@ -60,7 +122,7 @@ const routes = [
 
 Try it on [CodeSandbox](https://codesandbox.io/s/costro-dynamic-segments-3q8up).
 
-### Not found route
+## Not found route
 
 If no route path matches, the active component is automatically destroyed. To display a template instead, declare a component **without** the `path` in the route configuration passed to the app instance.
 
@@ -78,9 +140,9 @@ const routes = [
 
 Try it on [CodeSandbox](https://codesandbox.io/s/costro-not-found-g2quw).
 
-## Linking between pages
+## Navigation
 
-### Link component
+### Link
 
 We use the `<Link>` custom component to create links that match route path in the template. This allows the router to change the url without reloading the page.
 
@@ -147,15 +209,14 @@ type Options = {
 
 The output generated as an `HTMLElement` for JSX or a `string` for HTML.
 
-#### Links in JSX
-
-Simple link element
+**Example**
 
 <Tabs
 groupId="link-jsx"
 defaultValue="jsx"
 values={[
 { label: 'JSX', value: 'jsx', },
+{ label: 'Template String', value: 'template-string', },
 { label: 'HTML', value: 'html', }
 ]
 }>
@@ -165,60 +226,9 @@ values={[
 <Link to="/about">About</Link>
 ```
 
-</TabItem>
-<TabItem value="html">
-
-```html
-<a href="/about">About</a>
-```
-
-</TabItem>
-</Tabs>
-
-Link element with attributes and children.
-
-<Tabs
-groupId="link-jsx"
-defaultValue="jsx"
-values={[
-{ label: 'JSX', value: 'jsx', },
-{ label: 'HTML', value: 'html', }
-]
-}>
-<TabItem value="jsx">
-
-```jsx
-<Link to="/about" class="link" data-status>
-  <span>About</span>
-</Link>
-```
-
-</TabItem>
-<TabItem value="html">
-
-```html
-<a href="/about" class="link" data-status>
-  <span>About</span>
-</a>
-```
-
-</TabItem>
-</Tabs>
-
 Try it on [CodeSandbox](https://codesandbox.io/s/costro-jsx-template-k5zfs).
 
-#### Links in Template String
-
-Simple link element
-
-<Tabs
-groupId="link-template-string"
-defaultValue="template-string"
-values={[
-{ label: 'Template String', value: 'template-string', },
-{ label: 'HTML', value: 'html', }
-]
-}>
+</TabItem>
 <TabItem value="template-string">
 
 ```js
@@ -231,6 +241,8 @@ values={[
 )}`;
 ```
 
+Try it on [CodeSandbox](https://codesandbox.io/s/costro-template-string-kyjl1).
+
 </TabItem>
 <TabItem value="html">
 
@@ -241,43 +253,9 @@ values={[
 </TabItem>
 </Tabs>
 
-Link element with attributes and children.
-
-<Tabs
-groupId="link-template-string"
-defaultValue="template-string"
-values={[
-{ label: 'Template String', value: 'template-string', },
-{ label: 'HTML', value: 'html', }
-]
-}>
-<TabItem value="template-string">
-
-```js
-`${Link(
-  {
-    to: '/about',
-    children: ['About'],
-    class: 'link',
-    'data-status': true
-  },
-  true
-)}`;
-```
-
-</TabItem>
-<TabItem value="html">
-
-```html
-<a href="/about" class="link" data-status>
-  <span>About</span>
-</a>
-```
-
-</TabItem>
-</Tabs>
-
-Try it on [CodeSandbox](https://codesandbox.io/s/costro-template-string-kyjl1).
+:::tip
+Links can have any valid HTML attribute and children as text or `Node` elements.
+:::
 
 ### navigate
 
@@ -304,22 +282,10 @@ Costro.navigate();
 navigate(to: string): void;
 ```
 
-#### Navigate in event handling
-
-```jsx
-<button onClick={() => navigate('/about')}>About</button>
-```
-
-#### Navigate in the component
-
-```js
+```js title="src/components/home.js" {3}
 class Home extends Component {
-  handleClick() {
-    navigate('/about');
-  }
-
   render() {
-    return <button onClick={() => this.handleClick()}>About</button>;
+    return <button onClick={() => navigate('/about')}>About</button>;
   }
 }
 ```

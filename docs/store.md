@@ -5,7 +5,7 @@ title: Store
 
 The component store is a [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) object declared locally in the component itself as a class property. Components can view, set and get data in their store and also get data from another component. The store is accessible in the whole context of the Component class, including the lifecycle hooks.
 
-## Store property
+## Properties
 
 ### store
 
@@ -20,7 +20,7 @@ type store = Map<string, object>
 
 **Example**
 
-```js
+```js title="src/components/home.js" {5}
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -30,7 +30,7 @@ class Home extends Component {
 }
 ```
 
-## Store methods​
+## Methods​
 
 ### setStore
 
@@ -54,7 +54,7 @@ setStore(data: object): void
 
 **Example**
 
-```js
+```js title="src/components/home.js" {5,6,7}
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -66,12 +66,10 @@ class Home extends Component {
 }
 ```
 
-The JSON representation of the component store will be:
+The value of the Map objecrt of the component store will be:
 
-```json
-{
-  "name": "John Doe"
-}
+```text
+Map(1) {"name" => "John Doe"}
 ```
 
 ### getStore
@@ -97,7 +95,7 @@ The data associated to the key.
 
 **Examples**
 
-```js
+```js title="src/components/home.js" {6,9}
 class Home extends Component {
   constructor(props) {
     super(props);
