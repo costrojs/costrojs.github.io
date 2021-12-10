@@ -1,6 +1,6 @@
 ---
 id: home
-title: Home
+title: Build web applications with Components, Store and Router
 hide_table_of_contents: true
 ---
 

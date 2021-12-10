@@ -31,7 +31,19 @@ const config = {
 			{
 				name: 'keywords',
 				content:
-					'costro costro app costro js components framework ui router dom jsx store template-string'
+					'costro, costro app, costro js, components, framework, ui, router, dom, jsx, store, template-string'
+			},
+			{
+				name: 'google-site-verification',
+				content: 'nGhr13OYogV1vDXjpBEdnRt-km5DPqQIdieDLrasks0'
+			},
+			{
+				name: 'robots',
+				content: 'index,follow'
+			},
+			{
+				name: 'description',
+				content: 'description custoù'
 			}
 		],
 		tableOfContents: {
