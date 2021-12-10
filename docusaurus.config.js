@@ -27,12 +27,19 @@ const config = {
 		]
 	],
 	themeConfig: {
+		metadata: [
+			{
+				name: 'keywords',
+				content:
+					'costro costro app costro js components framework ui router dom jsx store template-string'
+			}
+		],
 		tableOfContents: {
 			minHeadingLevel: 2,
 			maxHeadingLevel: 5
 		},
 		announcementBar: {
-			backgroundColor: '#ff236d',
+			backgroundColor: '#42a5f5',
 			id: 'announcementBar',
 			content: `⭐️&nbsp;&nbsp;If you like <strong>Costro</strong>, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/yoriiis/costro">GitHub</a>`
 		},
