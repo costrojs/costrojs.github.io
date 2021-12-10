@@ -11,6 +11,11 @@ const sidebars = {
 			label: 'Installation'
 		},
 		{
+			type: 'doc',
+			id: 'playground',
+			label: 'Playground'
+		},
+		{
 			type: 'category',
 			label: 'Guide',
 			collapsed: false,

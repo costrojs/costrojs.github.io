@@ -84,7 +84,7 @@ const app = new App({
 });
 ```
 
-Try it on [CodeSandbox](https://codesandbox.io/s/costro-router-x8j4f).
+Try it on [CodeSandbox](https://codesandbox.io/s/costro-x8j4f).
 
 ## Route props
 

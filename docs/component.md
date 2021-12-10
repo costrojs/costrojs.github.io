@@ -63,56 +63,6 @@ You can transform a function component to a class component with the following s
 3. Move the content of the function into the `render()` method.
 4. Replace `props` with `this.props` in the `render()` content.
 
-## Props
-
-Props are inputs accepted by components and [injected from the route](router#route-props).
-
-The function component accepts a single `props` object argument with data as a parameter. The class component has the same principle except that the `props` are exposed in the context of the class with `this.props`.
-
-<Tabs
-groupId="function-class-component"
-defaultValue="function-component"
-values={[
-{ label: 'Function Component', value: 'function-component', },
-{ label: 'Class Component', value: 'class-component', }
-]
-}>
-<TabItem value="function-component">
-
-```js title="src/components/home.js"
-const Home = (props) => `<h2>Hello, ${props.name}</h2>`;
-```
-
-</TabItem>
-<TabItem value="class-component">
-
-```js title="src/components/home.js"
-class Home extends Component {
-  render() {
-    return `<h2>Hello, ${this.props.name}</h2>`;
-  }
-}
-```
-
-:::info
-If you implement the `constructor()` function on the class component, you should call `super(props)` before any other statement. Otherwise, props will not be available.
-:::
-
-</TabItem>
-</Tabs>
-
-For example, with the route props `{ name: 'John Doe' }`, the above example displays "Hello, John Doe" on the page.
-
-```mdx-code-block
-<BrowserWindow url="http://localhost:3000/#/">
-    <h2>Hello, John Doe</h2>
-</BrowserWindow>
-```
-
-<br />
-
-Try it on [CodeSandbox](https://codesandbox.io/s/costro-props-9noop).
-
 ## Lifecycle hooks
 
 Lifecycle hooks are available on **Class Components** only.
@@ -184,6 +134,56 @@ class Welcome extends Component {
   }
 }
 ```
+
+## Props
+
+Props are inputs accepted by components and [injected from the route](router#route-props).
+
+The function component accepts a single `props` object argument with data as a parameter. The class component has the same principle except that the `props` are exposed in the context of the class with `this.props`.
+
+<Tabs
+groupId="function-class-component"
+defaultValue="function-component"
+values={[
+{ label: 'Function Component', value: 'function-component', },
+{ label: 'Class Component', value: 'class-component', }
+]
+}>
+<TabItem value="function-component">
+
+```js title="src/components/home.js"
+const Home = (props) => `<h2>Hello, ${props.name}</h2>`;
+```
+
+</TabItem>
+<TabItem value="class-component">
+
+```js title="src/components/home.js"
+class Home extends Component {
+  render() {
+    return `<h2>Hello, ${this.props.name}</h2>`;
+  }
+}
+```
+
+:::info
+If you implement the `constructor()` function on the class component, you should call `super(props)` before any other statement. Otherwise, props will not be available.
+:::
+
+</TabItem>
+</Tabs>
+
+For example, with the route props `{ name: 'John Doe' }`, the above example displays "Hello, John Doe" on the page.
+
+```mdx-code-block
+<BrowserWindow url="http://localhost:3000/#/">
+    <h2>Hello, John Doe</h2>
+</BrowserWindow>
+```
+
+<br />
+
+Try it on [CodeSandbox](https://codesandbox.io/s/costro-props-9noop).
 
 ## State changes
 
