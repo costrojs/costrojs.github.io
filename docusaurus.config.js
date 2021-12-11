@@ -10,6 +10,7 @@ const config = {
 	onBrokenMarkdownLinks: 'warn',
 	organizationName: 'yoriiis',
 	projectName: 'costro',
+	trailingSlash: false,
 	presets: [
 		[
 			'@docusaurus/preset-classic',
