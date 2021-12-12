@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 The components can either be a [Function or a Class Component](component.md#function-and-class-components). These can be imported from other files. You can use code shared between them, like the `Navigation` function below.
 
-```js title="src/app.js" {1,10,21}
+```jsx title="src/app.js" {1,10,21}
 function Navigation() {
   return (
     <div>
@@ -91,7 +91,7 @@ Try it on [CodeSandbox](https://codesandbox.io/s/costro-x8j4f).
 Inject props in the route. Then, props are exposed in the [component props](component#props).
 
 ```js title="src/app.js" {7,8,9}
-new App({
+const app = new App({
   target: document.querySelector('#app'),
   routes: [
     {
@@ -126,7 +126,7 @@ Try it on [CodeSandbox](https://codesandbox.io/s/costro-dynamic-segments-3q8up).
 
 If no route path matches, the active component is automatically destroyed. To display a template instead, declare a component **without** the `path` in the route configuration passed to the app instance.
 
-```js
+```jsx
 function NotFound() {
   return <h2>Not found</h2>;
 }
@@ -282,7 +282,7 @@ Costro.navigate();
 navigate(to: string): void;
 ```
 
-```js title="src/components/home.js" {3}
+```jsx title="src/components/home.js" {3}
 class Home extends Component {
   render() {
     return <button onClick={() => navigate('/about')}>About</button>;

@@ -8,9 +8,6 @@ hide_table_of_contents: true
 import BrowserWindow from '@site/src/components/BrowserWindow';
 ```
 
-<br />
-<br />
-
 ```mdx-code-block
 <BrowserWindow>
 <h2>Build web applications with Components, Store and Router.</h2>

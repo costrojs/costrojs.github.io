@@ -24,7 +24,7 @@ values={[
 }>
 <TabItem value="function-component">
 
-```js title="src/components/welcome.js"
+```jsx title="src/components/welcome.js"
 function Welcome(props) {
   return <h2>Hello, {props.name}</h2>;
 }
@@ -33,7 +33,7 @@ function Welcome(props) {
 </TabItem>
 <TabItem value="class-component">
 
-```js title="src/components/welcome.js"
+```jsx title="src/components/welcome.js"
 import { Component } from 'costro';
 
 class Welcome extends Component {
@@ -75,7 +75,7 @@ Try it on [CodeSandbox](https://codesandbox.io/s/costro-lifecycle-5v9d8).
 
 The `beforeRender()` method runs before the component output has been rendered to the DOM.
 
-```js title="src/components/welcome.js" {2,3,4}
+```jsx title="src/components/welcome.js" {2,3,4}
 class Welcome extends Component {
   beforeRender() {
     // The component is not yet rendered to the DOM
@@ -91,7 +91,7 @@ class Welcome extends Component {
 
 The `afterRender()` method runs after the component output has been rendered to the DOM.
 
-```js title="src/components/welcome.js" {6,7,8}
+```jsx title="src/components/welcome.js" {6,7,8}
 class Welcome extends Component {
   render() {
     return <h2>Welcome</h2>;
@@ -103,11 +103,15 @@ class Welcome extends Component {
 }
 ```
 
+:::tip
+Access to the component's DOM must be done during the `afterRender` hook.
+:::
+
 ### beforeDestroy
 
 The `beforeDestroy()` method runs before the component has been removed to the DOM.
 
-```js title="src/components/welcome.js" {2,3,4}
+```jsx title="src/components/welcome.js" {2,3,4}
 class Welcome extends Component {
   beforeDestroy() {
     // The component is not yet removed from the DOM
@@ -123,7 +127,7 @@ class Welcome extends Component {
 
 The `afterDestroy()` method runs after the component has been removed to the DOM.
 
-```js title="src/components/welcome.js" {6,7,8}
+```jsx title="src/components/welcome.js" {6,7,8}
 class Welcome extends Component {
   render() {
     return <h2>Welcome</h2>;
@@ -173,46 +177,90 @@ If you implement the `constructor()` function on the class component, you should
 </TabItem>
 </Tabs>
 
-For example, with the route props `{ name: 'John Doe' }`, the above example displays "Hello, John Doe" on the page.
-
 ```mdx-code-block
-<BrowserWindow url="http://localhost:3000/#/">
+<BrowserWindow url="http://localhost:3000">
     <h2>Hello, John Doe</h2>
 </BrowserWindow>
 ```
 
 <br />
+<details>
+  <summary>See the props declaration</summary>
+
+```js
+const app = new App({
+  target: document.querySelector('#app'),
+  routes: [
+    {
+      path: '/',
+      component: Home,
+      props: {
+        name: 'John Doe'
+      }
+    }
+  ]
+});
+```
+
+</details>
 
 Try it on [CodeSandbox](https://codesandbox.io/s/costro-props-9noop).
 
 ## State changes
 
-Updating the view manually during state changes is much faster than using a virtual DOM with diff algorithms. The following example shows how to update the DOM on the `afterRender` event.
+It is safe and much faster to update the DOM manually rather than using a virtual DOM with diff algorithms. Lifecycle hooks can be useful for performing state changes and DOM updates.
 
-```js title="src/components/clock.js"
-class Clock extends Component {
+```jsx title="src/components/counter.js"
+class Counter extends Component {
+  constructor(props) {
+    super(props);
+    this.counter = 0;
+    this.handleClick = this.handleClick.bind(this);
+  }
+
   render() {
     return (
-      <h2>
-        It is <span id="time">{new Date().toLocaleTimeString()}</span>.
-      </h2>
+      <button onClick={this.handleClick}>
+        Clicks: <span id="counter">{this.counter.toString()}</span>
+      </button>
     );
   }
 
-  afterRender() {
-    const element = document.getElementById('time');
-    this.timer = setInterval(() => {
-      element.textContent = new Date().toLocaleTimeString();
-    }, 1000);
-  }
-
-  beforeDestroy() {
-    clearInterval(this.timer);
+  handleClick(e) {
+    e.preventDefault();
+    this.counter++;
+    document.getElementById('counter').textContent = this.counter;
   }
 }
 ```
 
-Try it on [CodeSandbox](https://codesandbox.io/s/costro-clock-4tilh).
+Try it on [CodeSandbox](https://codesandbox.io/s/costro-counter-4tilh).
+
+## Nested components
+
+Components can be nested and their props are automatically injected into the child component.
+
+```jsx
+class Person extends Component {
+  render() {
+    return <h2>Hello, {this.props.name}</h2>;
+  }
+}
+
+class Home extends Component {
+  render() {
+    return <Person name="John Doe" />;
+  }
+}
+```
+
+```mdx-code-block
+<BrowserWindow url="http://localhost:3000">
+    <h2>Hello, John Doe</h2>
+</BrowserWindow>
+```
+
+<!-- TODO: Try it on [CodeSandbox](https://codesandbox.io). -->
 
 ## Route data
 
@@ -236,7 +284,7 @@ Current path in URL and list of dynamic segments with their values.
 
 **Example**
 
-```js title="src/components/person.js"
+```jsx title="src/components/person.js"
 class Person extends Component {
   render() {
     return <h2>Person ID: {this.route.params.id}</h2>;
