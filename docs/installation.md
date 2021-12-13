@@ -21,8 +21,10 @@ Costro is currently available in the Release Candidate phase. Please send us fee
 You can use Costro via the CDN links and a `<script>` tag.
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/costro@1" crossorigin></script>
+<script src="https://cdn.jsdelivr.net/npm/costro" crossorigin></script>
 ```
+
+You can browse the source of the NPM package at [cdn.jsdelivr.net/npm/costro/](https://cdn.jsdelivr.net/npm/costro/).
 
 :::info
 The library will be registered as the global variable `window.Costro`.

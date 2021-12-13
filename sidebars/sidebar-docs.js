@@ -6,19 +6,26 @@ const sidebars = {
 			label: 'Introduction'
 		},
 		{
-			type: 'doc',
-			id: 'installation',
-			label: 'Installation'
+			type: 'category',
+			label: 'Getting started',
+			collapsed: false,
+			items: [
+				{
+					type: 'doc',
+					id: 'installation',
+					label: 'Installation'
+				},
+				{
+					type: 'doc',
+					id: 'playground',
+					label: 'Playground'
+				}
+			]
 		},
-		{
-			type: 'doc',
-			id: 'playground',
-			label: 'Playground'
-		},
+
 		{
 			type: 'category',
 			label: 'Guide',
-			collapsed: false,
 			items: [
 				{
 					type: 'doc',
