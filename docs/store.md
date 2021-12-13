@@ -3,13 +3,17 @@ id: store
 title: Store
 ---
 
-The component store is a [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) object declared locally in the component itself as a class property. Components can view, set and get data in their store and also get data from another component. The store is accessible in the whole context of the Component class, including the lifecycle hooks.
+The component store is a [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) object declared locally in the component itself as a class property. Components can view, set and get data in their store and also get data from another component.
+
+:::tip
+The store is accessible in the whole context of the Component class, including the lifecycle hooks.
+:::
 
 ## Properties
 
 ### store
 
-View the content of the store of the component.
+View the contents of the component store.
 
 **Signature**
 
@@ -34,10 +38,10 @@ class Home extends Component {
 
 ### setStore
 
-Add data to the store of the component.
+Add data to the component store.
 
 :::info
-When the key already exist in the Map object, Costro will perform deep cloning of the data.
+When the key already exist in the Map object, Costro will perform a deep cloning of the data.
 :::
 
 **Signature**
@@ -74,7 +78,7 @@ Map(1) {"name" => "John Doe"}
 
 ### getStore
 
-Get the data associated with the key in the component store or in another component if the optional `path` parameter is specified.
+Get the data associated with the key from the component store. If the optional `path` parameter is specified, the data is extracted from the component associated with the path.
 
 **Signature**
 
@@ -84,10 +88,10 @@ getStore(key: string, path?: string)
 
 **Parameters**
 
-| Parameter |   Type   | Description                                                                                                           |
-| --------- | :------: | --------------------------------------------------------------------------------------------------------------------- |
-| `key`     | `string` | The key of the data to search in the store                                                                            |
-| `path`    | `string` | (Optional) The path of the external component. It must correspond to a valid route path (associated with a component) |
+| Parameter |   Type   | Description                                                                                                                                   |
+| --------- | :------: | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `key`     | `string` | The key of the data to search in the store                                                                                                    |
+| `path`    | `string` | (Optional) The path of the external component. It must correspond to a valid route path ([associated with a component](router#define-routes)) |
 
 **Returns**
 

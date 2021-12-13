@@ -206,36 +206,6 @@ const app = new App({
 
 Try it on [CodeSandbox](https://codesandbox.io/s/costro-props-9noop).
 
-## State changes
-
-It is safe and much faster to update the DOM manually rather than using a virtual DOM with diff algorithms. Lifecycle hooks can be useful for performing state changes and DOM updates.
-
-```jsx title="src/components/counter.js"
-class Counter extends Component {
-  constructor(props) {
-    super(props);
-    this.counter = 0;
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  render() {
-    return (
-      <button onClick={this.handleClick}>
-        Clicks: <span id="counter">{this.counter.toString()}</span>
-      </button>
-    );
-  }
-
-  handleClick(e) {
-    e.preventDefault();
-    this.counter++;
-    document.getElementById('counter').textContent = this.counter;
-  }
-}
-```
-
-Try it on [CodeSandbox](https://codesandbox.io/s/costro-counter-4tilh).
-
 ## Nested components
 
 Components can be nested and their props are automatically injected into the child component.
@@ -261,6 +231,85 @@ class Home extends Component {
 ```
 
 <!-- TODO: Try it on [CodeSandbox](https://codesandbox.io). -->
+
+## State changes
+
+You should manually update the DOM on state changes. Making carefully crafted manual updates is much faster than using a virtual DOM with diff algorithms (and also less magic). Lifecycle hooks can be useful in making these updates at the right time.
+
+The following examples show how to update the DOM when the state changes.
+
+<Tabs
+groupId="state-changes"
+defaultValue="event-handling"
+values={[
+{ label: 'Event handling', value: 'event-handling', },
+{ label: 'Nested component', value: 'nested-component', }
+]
+}>
+<TabItem value="event-handling">
+
+Updates the `#counter` element after each click.
+
+```jsx title="src/components/counter.js"
+class Counter extends Component {
+  constructor(props) {
+    super(props);
+    this.counter = 0;
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  render() {
+    return (
+      <button onClick={this.handleClick}>
+        Clicks: <span id="counter">{this.counter}</span>
+      </button>
+    );
+  }
+
+  handleClick() {
+    this.counter++;
+    document.getElementById('counter').textContent = this.counter;
+  }
+}
+```
+
+Try it on [CodeSandbox](https://codesandbox.io/s/costro-counter-4tilh).
+
+</TabItem>
+<TabItem value="nested-component">
+
+Updates the nested `Clock` component with new props every second.
+
+```jsx title="src/components/counter.js"
+const Clock = (props) => <span id="time">{props.time.toLocaleTimeString()}</span>;
+
+class Counter extends Component {
+  render() {
+    return (
+      <>
+        It is, <Clock time={new Date()} />.
+      </>
+    );
+  }
+
+  afterRender() {
+    this.timer = setInterval(() => this.updateTime(), 1000);
+  }
+
+  updateTime() {
+    document.getElementById('time').replaceWith(<Clock time={new Date()} />);
+  }
+
+  beforeDestroy() {
+    clearInterval(this.timer);
+  }
+}
+```
+
+Try it on [CodeSandbox](https://codesandbox.io/s/costro-clock-er4hr).
+
+</TabItem>
+</Tabs>
 
 ## Route data
 
