@@ -191,25 +191,6 @@ If you implement the `constructor()` function on the class component, you should
 ```
 
 <br />
-<details>
-  <summary>See the props declaration</summary>
-
-```js
-const app = new App({
-  target: document.querySelector('#app'),
-  routes: [
-    {
-      path: '/',
-      component: Home,
-      props: {
-        name: 'John Doe'
-      }
-    }
-  ]
-});
-```
-
-</details>
 
 Try it on [CodeSandbox](https://codesandbox.io/s/costro-props-9noop).
 

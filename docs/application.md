@@ -35,11 +35,11 @@ type RouteConfig = {
 
 **Parameters**
 
-| Parameter |      Type       | Description                                    |
-| --------- | :-------------: | ---------------------------------------------- |
-| target    |  `HTMLElement`  | Unique `HTMLElement` to build the application. |
-| routes    | `RouteConfig[]` | [Route definition list](router#define-routes). |
-| mode      |    `string`     | Router mode (`hash\|history`). Default `hash`. |
+| Parameter |      Type       | Description                                                                   |
+| --------- | :-------------: | ----------------------------------------------------------------------------- |
+| target    |  `HTMLElement`  | Unique `HTMLElement` to build the application.                                |
+| routes    | `RouteConfig[]` | [Route definition list](router#define-routes).                                |
+| mode      |    `string`     | [Router mode](router#history-mode) with `hash` or `history` (default `hash`). |
 
 **Example**
 

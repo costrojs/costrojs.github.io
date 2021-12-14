@@ -135,7 +135,7 @@ You can use `class` or `className`.
 
 ```jsx
 <div style="display: flex; justify-content: center;"></div>
-<div style={{ display: flex, justifyContent: center }}></div>
+<div style={{ display: 'flex', justifyContent: 'center' }}></div>
 ```
 
 #### Dataset
@@ -157,7 +157,7 @@ const html = '<span>Hello</span>'
 
 #### Boolean attributes
 
-Boolean attributes can by declared without value or with `true`.
+Boolean attributes can be declared without a value or with the value `true`.
 
 ```jsx
 <button disabled></button>
