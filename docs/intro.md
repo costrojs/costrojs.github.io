@@ -7,11 +7,7 @@ title: Introduction
 
 Costro is a new lightweight framework with a different approach: helping you **build fast web applications** with a **low level of dependency**. If you are concerned about your app's loading performance, this library makes sense as it is extremely lightweight compared to the competition _(only 3 KB)_.
 
-Costro allows you to create Components with Store and a Router, all this with a unique and lightweight package.
-
-```bash
-npm install costro
-```
+Costro allows you to create components with store and a router in one lightweight easy-to-use package.
 
 ## Motivation
 

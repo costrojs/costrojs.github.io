@@ -29,23 +29,23 @@ const sidebars = {
 			items: [
 				{
 					type: 'doc',
-					id: 'application',
-					label: 'Application'
-				},
-				{
-					type: 'doc',
 					id: 'component',
 					label: 'Component'
 				},
 				{
 					type: 'doc',
-					id: 'store',
-					label: 'Store'
+					id: 'router',
+					label: 'Router'
 				},
 				{
 					type: 'doc',
-					id: 'router',
-					label: 'Router'
+					id: 'application',
+					label: 'Application'
+				},
+				{
+					type: 'doc',
+					id: 'store',
+					label: 'Store'
 				},
 				{
 					type: 'doc',

@@ -11,7 +11,7 @@ The store is accessible in the whole context of the Component class, including t
 
 ## Properties
 
-### store
+### Store
 
 View the contents of the component store.
 
@@ -36,7 +36,7 @@ class Home extends Component {
 
 ## Methods​
 
-### setStore
+### Set store
 
 Add data to the component store.
 
@@ -76,7 +76,7 @@ The value of the Map objecrt of the component store will be:
 Map(1) {"name" => "John Doe"}
 ```
 
-### getStore
+### Get store
 
 Get the data associated with the key from the component store. If the optional `path` parameter is specified, the data is extracted from the component associated with the path.
 

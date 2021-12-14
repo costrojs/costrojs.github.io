@@ -6,46 +6,9 @@ title: Router
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-## Getting started
+Now that your components are created, you can define routes and associate them with your components. If you have not yet created any component, I invite you to read the previous step [Component](component.md).
 
-### Define components
-
-The components can either be a [Function or a Class Component](component.md#function-and-class-components). These can be imported from other files. You can use code shared between them, like the `Navigation` function below.
-
-```jsx title="src/app.js" {1,10,21}
-function Navigation() {
-  return (
-    <div>
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-    </div>
-  );
-}
-
-class Home extends Component {
-  render() {
-    return (
-      <div>
-        <Navigation />
-        <h2>Home</h2>
-      </div>
-    );
-  }
-}
-
-class About extends Component {
-  render() {
-    return (
-      <div>
-        <Navigation />
-        <h2>About</h2>
-      </div>
-    );
-  }
-}
-```
-
-### Define routes
+## Define routes
 
 Route are defined in an array of route object. Each route should map to a component.
 
@@ -60,7 +23,12 @@ type RouteConfig = {
 };
 ```
 
-```js title="src/app.js" {3,4,7,8}
+**Example**
+
+```js title="src/app.js" {6,7,10,11}
+import Home from 'src/components/home';
+import About from 'src/components/about';
+
 const routes = [
   {
     path: '/',
@@ -72,19 +40,6 @@ const routes = [
   }
 ];
 ```
-
-### Create the application instance
-
-Create the [application instance](application#creating-an-application-instance) and pass the routes in parameters.
-
-```js title="src/app.js" {3}
-const app = new App({
-  target: document.querySelector('#app'),
-  routes
-});
-```
-
-Try it on [CodeSandbox](https://codesandbox.io/s/costro-x8j4f).
 
 ## Route props
 
@@ -105,7 +60,7 @@ const app = new App({
 });
 ```
 
-## Dynamic Routing
+## Dynamic routing
 
 Dynamic routes can be achieved by dynamic segments declared in the `path` of the route. Dynamic segments start with a colon. You can have multiple segments in the same route, and they will mapped to the corresponding fields on `this.route.params` in the component class.
 
@@ -152,8 +107,10 @@ We use the `<Link>` custom component to create links that match route path in th
 import { Link } from 'costro';
 ```
 
-:::info
-With CDN links, `Link` is exposed in the global variable `window.Costro`.
+<details>
+  <summary>Import `Link` with CDN links</summary>
+
+`Link` is exposed in the global variable `window.Costro`.
 
 <Tabs
 groupId="link-cdn"
@@ -178,8 +135,7 @@ values={[
 
 </TabItem>
 </Tabs>
-
-:::
+</details>
 
 **Signature**
 
@@ -257,7 +213,7 @@ Try it on [CodeSandbox](https://codesandbox.io/s/costro-template-string-kyjl1).
 Links can have any valid HTML attribute and children as text or `Node` elements.
 :::
 
-### navigate
+### Navigate
 
 We use the `navigate` function to trigger navigation changes. It can be used with event handling or anywhere in component.
 
@@ -267,20 +223,24 @@ We use the `navigate` function to trigger navigation changes. It can be used wit
 import { navigate } from 'costro';
 ```
 
-:::info
-With CDN links, `navigate` is exposed in the global variable `window.Costro`.
+<details>
+  <summary>Import `navigate` with CDN links</summary>
+
+`navigate` is exposed in the global variable `window.Costro`.
 
 ```js
 Costro.navigate();
 ```
 
-:::
+</details>
 
 **Signature**
 
 ```ts
 navigate(to: string): void;
 ```
+
+**Example**
 
 ```jsx title="src/components/home.js" {3}
 class Home extends Component {

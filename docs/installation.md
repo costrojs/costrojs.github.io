@@ -64,5 +64,5 @@ yarn add costro
 </Tabs>
 
 :::info
-System requirements: Node.js v12 or later
+System requirements: Node.js v12 or later.
 :::

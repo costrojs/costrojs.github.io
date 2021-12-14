@@ -10,9 +10,11 @@ import TabItem from '@theme/TabItem';
 import BrowserWindow from '@site/src/components/BrowserWindow';
 ```
 
+First, we need to create components so that we can later associate them with routes.
+
 ## Function and Class Components
 
-The easiest way to define a component is to write a JavaScript function. The component can also be written as an ES6 class and extends the class `Component` from `Costro`. This offers more features which you will discover below.
+The easiest way to define a component is to write a JavaScript function. The component can also be written as an ES6 class and extends the class `Component` from `Costro`. This offers more features which you will discover below. These can be imported from other files.
 
 <Tabs
 groupId="function-class-component"
@@ -24,8 +26,8 @@ values={[
 }>
 <TabItem value="function-component">
 
-```jsx title="src/components/welcome.js"
-function Welcome(props) {
+```jsx title="src/components/home.js"
+function Home(props) {
   return <h2>Hello, {props.name}</h2>;
 }
 ```
@@ -33,24 +35,27 @@ function Welcome(props) {
 </TabItem>
 <TabItem value="class-component">
 
-```jsx title="src/components/welcome.js"
+```jsx title="src/components/home.js"
 import { Component } from 'costro';
 
-class Welcome extends Component {
+class Home extends Component {
   render() {
     return <h2>Hello, {this.props.name}</h2>;
   }
 }
 ```
 
-:::info
-With CDN links, `Component` is exposed in the global variable `window.Costro`.
+<details>
+  <summary>Import `Component` with CDN links</summary>
 
-```js title="src/components/welcome.js"
-class Welcome extends Costro.Component {}
+`Component` is exposed in the global variable `window.Costro`.
+
+```js title="src/components/home.js"
+class Home extends Costro.Component {}
 ```
 
-:::
+</details>
+
 </TabItem>
 </Tabs>
 
@@ -71,30 +76,30 @@ We can declare special methods on the component class to run some code when a co
 
 Try it on [CodeSandbox](https://codesandbox.io/s/costro-lifecycle-5v9d8).
 
-### beforeRender
+### Before render
 
 The `beforeRender()` method runs before the component output has been rendered to the DOM.
 
-```jsx title="src/components/welcome.js" {2,3,4}
-class Welcome extends Component {
+```jsx title="src/components/home.js" {2,3,4}
+class Home extends Component {
   beforeRender() {
     // The component is not yet rendered to the DOM
   }
 
   render() {
-    return <h2>Welcome</h2>;
+    return <h2>Home</h2>;
   }
 }
 ```
 
-### afterRender
+### After render
 
 The `afterRender()` method runs after the component output has been rendered to the DOM.
 
-```jsx title="src/components/welcome.js" {6,7,8}
-class Welcome extends Component {
+```jsx title="src/components/home.js" {6,7,8}
+class Home extends Component {
   render() {
-    return <h2>Welcome</h2>;
+    return <h2>Home</h2>;
   }
 
   afterRender() {
@@ -107,30 +112,30 @@ class Welcome extends Component {
 Access to the component's DOM must be done during the `afterRender` hook.
 :::
 
-### beforeDestroy
+### Before destroy
 
 The `beforeDestroy()` method runs before the component has been removed to the DOM.
 
-```jsx title="src/components/welcome.js" {2,3,4}
-class Welcome extends Component {
+```jsx title="src/components/home.js" {2,3,4}
+class Home extends Component {
   beforeDestroy() {
     // The component is not yet removed from the DOM
   }
 
   render() {
-    return <h2>Welcome</h2>;
+    return <h2>Home</h2>;
   }
 }
 ```
 
-### afterDestroy
+### After destroy
 
 The `afterDestroy()` method runs after the component has been removed to the DOM.
 
-```jsx title="src/components/welcome.js" {6,7,8}
-class Welcome extends Component {
+```jsx title="src/components/home.js" {6,7,8}
+class Home extends Component {
   render() {
-    return <h2>Welcome</h2>;
+    return <h2>Home</h2>;
   }
 
   afterDestroy() {
@@ -156,7 +161,9 @@ values={[
 <TabItem value="function-component">
 
 ```js title="src/components/home.js"
-const Home = (props) => `<h2>Hello, ${props.name}</h2>`;
+function Home(props) {
+  return `<h2>Hello, ${props.name}</h2>`;
+}
 ```
 
 </TabItem>
@@ -281,7 +288,9 @@ Try it on [CodeSandbox](https://codesandbox.io/s/costro-counter-4tilh).
 Updates the nested `Clock` component with new props every second.
 
 ```jsx title="src/components/counter.js"
-const Clock = (props) => <span id="time">{props.time.toLocaleTimeString()}</span>;
+function Clock(props) {
+  return <span id="time">{props.time.toLocaleTimeString()}</span>;
+}
 
 class Counter extends Component {
   render() {

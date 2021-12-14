@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 import BrowserWindow from '@site/src/components/BrowserWindow';
 ```
 
-Costro templates can be written in native Template String or with JSX, according to your needs.
+Costro templates can be written in native Template String or with JSX. When building large scale applications with Costro, JSX is recommended because it provides more readable templates and offers more flexibility than native string templates.
 
 ## Template String
 
@@ -27,9 +27,9 @@ values={[
 <TabItem value="function-component">
 
 ```js title="src/components/home.js"
-const Home = () => {
+function Home() {
   return `<h2>Home</h2>`;
-};
+}
 ```
 
 </TabItem>
@@ -52,24 +52,20 @@ Try it on [CodeSandbox](https://codesandbox.io/s/costro-template-string-kyjl1).
 
 Out of the box, Costro provides the `createElement()` and `Fragment()` functions to transforms JSX syntax into valid DOM elements.
 
-Import the `costro/jsx` file when using JSX in templates (only 1Kb).
-
 To further optimize the size of the generated file and pay homage to the [hyperscript](https://github.com/hyperhype/hyperscript), short names are available:
 
 - `createElement` => `h`
 - `Fragment` => `F`
 
-:::tip
-JSX is recommended when building large scale applications with Costro.
-:::
-
-:::info
+:::note
 Costro is also compatible with the [jsx-dom](https://github.com/proteriax/jsx-dom) package.
 :::
 
 Try it on [CodeSandbox](https://codesandbox.io/s/costro-jsx-template-k5zfs).
 
 **Import**
+
+Import the `costro/jsx` file when using JSX in templates _(only 1Kb)_.
 
 ```jsx
 import { h, F } from 'costro/jsx';
@@ -86,9 +82,9 @@ values={[
 <TabItem value="function-component">
 
 ```jsx title="src/components/home.js"
-const Home = () => {
+function Home() {
   return <h2>Home</h2>;
-};
+}
 ```
 
 </TabItem>
@@ -105,10 +101,6 @@ class Home extends Component {
 </TabItem>
 </Tabs>
 
-:::tip
-You can use `class` or `className` for CSS classes.
-:::
-
 ### Fragments
 
 ```jsx title="src/components/home.js"
@@ -124,7 +116,68 @@ class Home extends Component {
 }
 ```
 
-### SVG
+### Syntax
+
+#### Class
+
+`String`
+
+You can use `class` or `className`.
+
+```jsx
+<div class="item"></div>
+<div className="item"></div>
+```
+
+#### Style
+
+`String|Object`
+
+```jsx
+<div style="display: flex; justify-content: center;"></div>
+<div style={{ display: flex, justifyContent: center }}></div>
+```
+
+#### Dataset
+
+`Object`
+
+```jsx
+<div dataset={{ firstName: 'John', lastName: 'Doe' }}></div>
+```
+
+#### Inner HTML
+
+`String`
+
+```jsx
+const html = '<span>Hello</span>'
+<div innerHTML={html}></div>
+```
+
+#### Boolean attributes
+
+Boolean attributes can by declared without value or with `true`.
+
+```jsx
+<button disabled></button>
+<button disabled={true}></button>
+```
+
+#### Falsy value
+
+Falsy values are not rendered.
+
+```jsx
+<div />
+<div></div>
+<div>{false}</div>
+<div>{null}</div>
+<div>{undefined}</div>
+<div>{true}</div>
+```
+
+#### SVG
 
 Costro applies the SVG attributes as they are written. This means that you can copy and paste unmodified SVG directly into your code and have them work right away.
 
@@ -138,7 +191,9 @@ Costro applies the SVG attributes as they are written. This means that you can c
 
 Try it on [CodeSandbox](https://codesandbox.io/s/costro-svg-2ek63).
 
-### Babel configuration
+### Configuration files
+
+#### Babel
 
 To transpile JSX, you need the Babel plugin `@babel/plugin-transform-react-jsx` that converts JSX to valid JavaScript code.
 
@@ -162,8 +217,10 @@ Then, update the Babel configuration to register the plugin and the pragmas.
 }
 ```
 
-:::info
-With CDN links, pragmas are exposed in the global variable `window.Costro.jsx`.
+<details>
+  <summary>Pragmas with CDN links</summary>
+
+Pragmas are exposed in the global variable `window.Costro.jsx`.
 
 ```json title="babel.config.json"
 {
@@ -173,9 +230,10 @@ With CDN links, pragmas are exposed in the global variable `window.Costro.jsx`.
 ```
 
 [Documentation of the `@babel/plugin-transform-react-jsx`](https://babeljs.io/docs/en/babel-plugin-transform-react-jsx)
-:::
 
-### ESLint configuration
+</details>
+
+#### ESLint
 
 ESLint provide support for JSX syntax with the `eslint-plugin-react` package.
 

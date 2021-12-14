@@ -1,42 +1,16 @@
 ---
 id: application
 title: Application
-hide_table_of_contents: true
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-<!-- markdownlint-disable MD041 -->
+Now that you have [created your components](component.md) and [associated them with routes](router.md), you can create the application instance by passing the routes to it.
 
 ## Create the application instance
 
-Every Costro application starts by creating a new application instance with the `App` class:
-
-```js
-import { App } from 'costro';
-
-const app = new App({
-  target: document.querySelector('#app'),
-  routes: [
-    {
-      path: '/',
-      component: () => '<h2>Home</h2>'
-    }
-  ]
-});
-```
-
-:::info
-With CDN links, `Application` is exposed in the global variable `window.Costro`.
-
-```js
-const app = new Costro.Application();
-```
-
-:::
-
-Try it on [CodeSandbox](https://codesandbox.io/s/costro-application-instance-u1gqx).
+Create the application instance with the `App` class and pass the routes configuration.
 
 **Signature**
 
@@ -64,5 +38,40 @@ type RouteConfig = {
 | Parameter |      Type       | Description                                    |
 | --------- | :-------------: | ---------------------------------------------- |
 | target    |  `HTMLElement`  | Unique `HTMLElement` to build the application. |
-| routes    | `RouteConfig[]` | Route definition. list                         |
+| routes    | `RouteConfig[]` | [Route definition list](router#define-routes). |
 | mode      |    `string`     | Router mode (`hash\|history`). Default `hash`. |
+
+**Example**
+
+```js title="src/app.js"
+import { App } from 'costro';
+import Home from 'src/components/home';
+import About from 'src/components/about';
+
+const app = new App({
+  target: document.querySelector('#app'),
+  routes: [
+    {
+      path: '/',
+      component: Home
+    },
+    {
+      path: '/about',
+      component: About
+    }
+  ]
+});
+```
+
+Try it on [CodeSandbox](https://codesandbox.io/s/costro-x8j4f).
+
+<details>
+  <summary>Import `App` with CDN links</summary>
+
+`Application` is exposed in the global variable `window.Costro`.
+
+```js
+const app = new Costro.Application();
+```
+
+</details>
