@@ -73,7 +73,7 @@ jobs:
         with:
           target_branch: docs
           build_dir: build
-          keep_history: true
+          keep_history: false
           commit_message: "Deploy to GitHub pages"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
