@@ -27,12 +27,24 @@ const config = {
 			}
 		]
 	],
+	plugins: [
+		[
+			'@docusaurus/plugin-content-docs',
+			{
+				id: 'tutorial',
+				path: 'tutorial',
+				routeBasePath: 'tutorial',
+				sidebarPath: require.resolve('./sidebars/sidebar-tutorial.js')
+				// ... other options
+			}
+		]
+	],
 	themeConfig: {
 		metadata: [
 			{
 				name: 'keywords',
 				content:
-					'costro, costro app, costro js, components, framework, ui, router, dom, jsx, store, template-string'
+					'costro, costro app, costro js, javascript, components, framework, ui, router, frontend, dom, jsx, store, template-string'
 			},
 			{
 				name: 'google-site-verification',
@@ -64,11 +76,17 @@ const config = {
 			title: 'Costro',
 			items: [
 				{
-					to: 'docs/intro',
+					to: 'docs/installation',
 					type: 'doc',
-					docId: 'intro',
+					docId: 'installation',
 					position: 'left',
 					label: 'Docs'
+				},
+				{
+					to: 'tutorial',
+					docId: 'tutorial/index',
+					position: 'left',
+					label: 'Tutorial'
 				},
 				{
 					type: 'dropdown',

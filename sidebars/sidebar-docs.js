@@ -2,31 +2,19 @@ const sidebars = {
 	docs: [
 		{
 			type: 'doc',
-			id: 'intro',
-			label: 'Introduction'
+			id: 'installation',
+			label: 'Installation'
 		},
 		{
 			type: 'category',
-			label: 'Getting started',
+			label: 'Guide',
 			collapsed: false,
 			items: [
 				{
 					type: 'doc',
-					id: 'installation',
-					label: 'Installation'
+					id: 'template-syntax',
+					label: 'Template syntax'
 				},
-				{
-					type: 'doc',
-					id: 'playground',
-					label: 'Playground'
-				}
-			]
-		},
-
-		{
-			type: 'category',
-			label: 'Guide',
-			items: [
 				{
 					type: 'doc',
 					id: 'component',
@@ -46,11 +34,6 @@ const sidebars = {
 					type: 'doc',
 					id: 'store',
 					label: 'Store'
-				},
-				{
-					type: 'doc',
-					id: 'template-syntax',
-					label: 'Template syntax'
 				}
 			]
 		}

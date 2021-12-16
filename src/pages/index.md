@@ -11,13 +11,13 @@ import BrowserWindow from '@site/src/components/BrowserWindow';
 ```mdx-code-block
 <BrowserWindow>
 <h2>Build web applications with Components, Store and Router.</h2>
-<p>One lightweight framework with everything you really need in 3 KB!<br />It uses modern JavaScript to be as light as possible and therefore only works on the latest version of modern browsers (e.g. Chrome, Firefox, Edge, Safari, Opera).</p>
+<p>One lightweight easy-to-use framework to build high performance web applications with 3 KB!<br />It uses modern JavaScript to be as light as possible and therefore only works on the latest version of modern browsers (e.g. Chrome, Firefox, Edge, Safari, Opera).</p>
 
 <h3>Features</h3>
 
 - [**Components**](docs/component) - Create function and class component.
-- [**Store**](docs/store) - Access component store from any component.
 - [**Router**](docs/router) - Map components to the routes.
+- [**Store**](docs/store) - Access component store from any component.
 - [**Lifecycle hooks**](docs/component#lifecycle-hooks) - Take advantage of component lifecycle events.
 - [**Props**](docs/component#props) - Inject props into components.
 - [**Template syntax**](docs/template-syntax) - Write your templates in a native Template String or in JSX.

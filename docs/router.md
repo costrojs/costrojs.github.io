@@ -6,8 +6,6 @@ title: Router
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Now that your components are created, you can define routes and associate them with your components. If you have not yet created any component, I invite you to read the previous step [Component](component.md).
-
 ## Define routes
 
 Route are defined in an array of route object. Each route should map to a component.
@@ -64,7 +62,7 @@ const app = new App({
 
 Dynamic routes can be achieved by dynamic segments declared in the `path` of the route. Dynamic segments start with a colon. You can have multiple segments in the same route, and they will mapped to the corresponding fields on `this.route.params` in the component class.
 
-In addition to `this.route.params`, the `this.route` object also exposes other useful information such as `this.route.path` (current path in URL). You can see all the details in the [Component reference](component.md#Component-route-data).
+In addition to `this.route.params`, the `this.route` object also exposes other useful information such as `this.route.path` (current path in URL). You can see all the details in the [Component reference](component#Component-route-data).
 
 ```js
 const routes = [

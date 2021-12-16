@@ -10,8 +10,6 @@ import TabItem from '@theme/TabItem';
 import BrowserWindow from '@site/src/components/BrowserWindow';
 ```
 
-First, we need to create components so that we can later associate them with routes.
-
 ## Function and Class Components
 
 The easiest way to define a component is to write a JavaScript function. The component can also be written as an ES6 class and extends the class `Component` from `Costro`. This offers more features which you will discover below. These can be imported from other files.

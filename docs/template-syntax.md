@@ -10,11 +10,11 @@ import TabItem from '@theme/TabItem';
 import BrowserWindow from '@site/src/components/BrowserWindow';
 ```
 
-Costro templates can be written in native Template String or with JSX. When building large scale applications with Costro, JSX is recommended because it provides more readable templates and offers more flexibility than native string templates.
+Costro's component templates can be written in native Template String or with JSX. When building large scale applications with Costro, JSX is recommended because it provides more readable templates and offers more flexibility than native Template Strings.
 
 ## Template String
 
-The Template String is the easiest way to define the template of a component. The component can be a [Function or a Class Component](component.md#function-and-class-components).
+The Template String is the easiest way to define the template of a component. The component can be a [Function or a Class Component](component#function-and-class-components).
 
 <Tabs
 groupId="function-class-component"
@@ -58,7 +58,7 @@ To further optimize the size of the generated file and pay homage to the [hypers
 - `Fragment` => `F`
 
 :::note
-Costro is also compatible with the [jsx-dom](https://github.com/proteriax/jsx-dom) package.
+Costro is also compatible with the [jsx-dom](https://github.com/proteriax/jsx-dom) package with the [syntaxes](template-syntax#syntax) declared below.
 :::
 
 Try it on [CodeSandbox](https://codesandbox.io/s/costro-jsx-template-k5zfs).
@@ -116,7 +116,7 @@ class Home extends Component {
 }
 ```
 
-### Syntax
+### Attributes
 
 #### Class
 
@@ -164,20 +164,7 @@ Boolean attributes can be declared without a value or with the value `true`.
 <button disabled={true}></button>
 ```
 
-#### Falsy value
-
-Falsy values are not rendered.
-
-```jsx
-<div />
-<div></div>
-<div>{false}</div>
-<div>{null}</div>
-<div>{undefined}</div>
-<div>{true}</div>
-```
-
-#### SVG
+### SVG
 
 Costro applies the SVG attributes as they are written. This means that you can copy and paste unmodified SVG directly into your code and have them work right away.
 
