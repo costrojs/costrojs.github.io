@@ -22,7 +22,6 @@ import BrowserWindow from '@site/src/components/BrowserWindow';
 - [**Props**](docs/component#props) - Inject props into components.
 - [**Template syntax**](docs/template-syntax) - Write your templates in a native Template String or in JSX.
 - [**JSX compiler**](docs/template-syntax#jsx-) - Transforms JSX syntax into valid DOM elements _(only 1KB)_.
-- [**No virtual DOM**](docs/intro#virtual-dom) - Manually updating the view when the state changes is much faster.
 
 <h3>Support</h3>
 
