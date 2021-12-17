@@ -3,12 +3,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
 const config = {
 	title: 'Costro',
-	tagline: '⚡ Build web applications with Components, Store and Router in 3KB!',
-	url: 'https://yoriiis.github.io',
-	baseUrl: '/costro/',
+	tagline: '⚡ Build web applications with Components, Store and Router in 3 KB!',
+	url: 'https://costrojs.github.io',
+	baseUrl: '/',
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
-	organizationName: 'yoriiis',
+	organizationName: 'costrojs',
 	projectName: 'costro',
 	trailingSlash: false,
 	presets: [
@@ -16,7 +16,7 @@ const config = {
 			'@docusaurus/preset-classic',
 			{
 				docs: {
-					editUrl: 'https://github.com/yoriiis/costro/edit/dev-docs',
+					editUrl: 'https://github.com/costrojs/costro/edit/main',
 					sidebarPath: require.resolve('./sidebars/sidebar-docs.js'),
 					path: 'docs',
 					routeBasePath: 'docs'
@@ -35,7 +35,6 @@ const config = {
 				path: 'tutorial',
 				routeBasePath: 'tutorial',
 				sidebarPath: require.resolve('./sidebars/sidebar-tutorial.js')
-				// ... other options
 			}
 		]
 	],
@@ -66,7 +65,7 @@ const config = {
 		announcementBar: {
 			backgroundColor: '#42a5f5',
 			id: 'announcementBar',
-			content: `⭐️&nbsp;&nbsp;If you like <strong>Costro</strong>, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/yoriiis/costro">GitHub</a>`
+			content: `⭐️&nbsp;&nbsp;If you like <strong>Costro</strong>, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/costrojs/costro">GitHub</a>`
 		},
 		colorMode: {
 			respectPrefersColorScheme: true
@@ -95,20 +94,20 @@ const config = {
 					items: [
 						{
 							label: 'GitHub Discussions',
-							href: 'https://github.com/yoriiis/costro/discussions'
+							href: 'https://github.com/costrojs/costro/discussions'
 						},
 						{
 							label: 'Contribution Guide',
-							href: 'https://github.com/yoriiis/costro/blob/main/CONTRIBUTING.md'
+							href: 'https://github.com/costrojs/costro/blob/main/CONTRIBUTING.md'
 						},
 						{
 							label: 'Changelog',
-							href: 'https://github.com/yoriiis/costro/blob/main/CHANGELOG.md'
+							href: 'https://github.com/costrojs/costro/blob/main/CHANGELOG.md'
 						}
 					]
 				},
 				{
-					href: 'https://github.com/yoriiis/costro',
+					href: 'https://github.com/costrojs/costro',
 					position: 'right',
 					className: 'header-githubLink',
 					'aria-label': 'GitHub repository'

@@ -25,7 +25,7 @@ import BrowserWindow from '@site/src/components/BrowserWindow';
 
 <h3>Support</h3>
 
-For questions and support please use the [GitHub Discussions](https://github.com/yoriiis/costro/discussions). For bug report or feature request, please use the [issues on GitHub](https://github.com/yoriiis/costro/issues).<br />Prs are also welcome!
+For questions and support please use the [GitHub Discussions](https://github.com/costrojs/costro/discussions). For bug report or feature request, please use the [issues on GitHub](https://github.com/costrojs/costro/issues).<br />Prs are also welcome!
 
 <h3>Used by</h3>
 
