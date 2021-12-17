@@ -43,7 +43,7 @@ jobs:
       - name: Upload GitHub Pages artifacts
         uses: actions/upload-artifact@v1
         if: github.ref == 'refs/heads/dev-docs' &&
-            github.repository == 'yoriiis/costro' &&
+            github.repository == 'costrojs/costro' &&
             github.event_name != 'pull_request'
         with:
           name: docs
@@ -55,7 +55,7 @@ jobs:
     needs: build
     if: success() &&
         github.ref == 'refs/heads/dev-docs' &&
-        github.repository == 'yoriiis/costro' &&
+        github.repository == 'costrojs/costro' &&
         github.event_name != 'pull_request'
     steps:
       - uses: actions/checkout@v2
