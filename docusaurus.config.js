@@ -16,7 +16,7 @@ const config = {
 			'@docusaurus/preset-classic',
 			{
 				docs: {
-					editUrl: 'https://github.com/costrojs/costro/edit/main',
+					editUrl: 'https://github.com/costrojs/costrojs.github.io/edit/main',
 					sidebarPath: require.resolve('./sidebars/sidebar-docs.js'),
 					path: 'docs',
 					routeBasePath: 'docs'
