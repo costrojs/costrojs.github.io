@@ -42,7 +42,7 @@ jobs:
 
       - name: Upload GitHub Pages artifacts
         uses: actions/upload-artifact@v1
-        if: github.ref == 'refs/heads/dev-docs' &&
+        if: github.ref == 'refs/heads/main' &&
             github.repository == 'costrojs/costrojs.github.io' &&
             github.event_name != 'pull_request'
         with:
@@ -54,7 +54,7 @@ jobs:
     timeout-minutes: 10
     needs: build
     if: success() &&
-        github.ref == 'refs/heads/dev-docs' &&
+        github.ref == 'refs/heads/main' &&
         github.repository == 'costrojs/costrojs.github.io' &&
         github.event_name != 'pull_request'
     steps:
