@@ -1,4 +1,4 @@
-Sitemap: https://costrojs.github.io/sitemap.xml
+Sitemap: https://costro.js.org/sitemap.xml
 
 User-agent: *
 Allow: /

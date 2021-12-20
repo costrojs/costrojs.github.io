@@ -4,7 +4,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 const config = {
 	title: 'Costro',
 	tagline: '⚡ Build web applications with Components, Store and Router in 3 KB!',
-	url: 'https://costrojs.github.io',
+	url: 'https://costro.js.org',
 	baseUrl: '/',
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
