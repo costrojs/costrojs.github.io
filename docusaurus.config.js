@@ -47,7 +47,7 @@ const config = {
 			},
 			{
 				name: 'google-site-verification',
-				content: 'nGhr13OYogV1vDXjpBEdnRt-km5DPqQIdieDLrasks0'
+				content: '9rL5GSeAGw95RpFEFlEbL284EWLZP3lsjQ7WFPCR2j8'
 			},
 			{
 				name: 'robots',
