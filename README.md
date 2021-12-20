@@ -4,7 +4,7 @@
 
 ## Contribution guide
 
-To contribute to the project, please read the [Contribution Guide](https://github.com/costrojs/costrojs.github.io/blob/main/CONTRIBUTIN.md).
+To contribute to the project, please read the [Contribution Guide](https://github.com/costrojs/costrojs.github.io/blob/main/CONTRIBUTING.md).
 
 ## Questions
 
