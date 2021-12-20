@@ -4,14 +4,9 @@
 	"scripts": {
 		"build": "docusaurus build",
 		"clear": "docusaurus clear",
-		"deploy": "docusaurus deploy",
-		"docusaurus": "docusaurus",
-		"serve": "docusaurus serve",
 		"start": "docusaurus start",
-		"swizzle": "docusaurus swizzle",
-		"test:markdown": "markdownlint-cli2 '**/*.md'",
-		"write-heading-ids": "docusaurus write-heading-ids",
-		"write-translations": "docusaurus write-translations"
+		"test": "test:markdown",
+		"test:markdown": "markdownlint-cli2 '**/*.md'"
 	},
 	"browserslist": {
 		"production": [
