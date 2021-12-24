@@ -1,12 +1,5 @@
 :root {
-	--ifm-color-primary: #42a5f5;
-	--ifm-color-primary-dark: #ff065a;
-	--ifm-color-primary-darker: #f60053;
-	--ifm-color-primary-darkest: #cb0044;
-	--ifm-color-primary-light: #ff4080;
-	--ifm-color-primary-lighter: #ff4f8a;
-	--ifm-color-primary-lightest: #ff7aa7;
-	--ifm-code-font-size: 95%;
+	--ifm-color-primary: #99d98c;
 }
 
 .docusaurus-highlight-code-line {

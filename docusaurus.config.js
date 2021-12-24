@@ -11,6 +11,7 @@ const config = {
 	organizationName: 'costrojs',
 	projectName: 'costro',
 	trailingSlash: false,
+	favicon: 'svg/costro-c-bg-round.svg',
 	presets: [
 		[
 			'@docusaurus/preset-classic',
@@ -63,7 +64,7 @@ const config = {
 			maxHeadingLevel: 5
 		},
 		announcementBar: {
-			backgroundColor: '#42a5f5',
+			backgroundColor: '#99d98c',
 			id: 'announcementBar',
 			content: `⭐️&nbsp;&nbsp;If you like <strong>Costro</strong>, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/costrojs/costro">GitHub</a>`
 		},
@@ -73,6 +74,12 @@ const config = {
 		navbar: {
 			hideOnScroll: true,
 			title: 'Costro',
+			logo: {
+				alt: 'Costro logo',
+				src: 'svg/costro-c-bg-round.svg',
+				width: 32,
+				height: 32
+			},
 			items: [
 				{
 					to: 'docs/installation',
@@ -83,7 +90,6 @@ const config = {
 				},
 				{
 					to: 'tutorial',
-					docId: 'tutorial/index',
 					position: 'left',
 					label: 'Tutorial'
 				},

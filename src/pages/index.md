@@ -4,12 +4,9 @@ title: Build web applications with Components, Store and Router
 hide_table_of_contents: true
 ---
 
-```mdx-code-block
-import BrowserWindow from '@site/src/components/BrowserWindow';
-```
-
-```mdx-code-block
-<BrowserWindow>
+<p align="center">
+    <img src="../../svg/costro.svg" width="250" />
+</p>
 <h2>Build web applications with Components, Store and Router.</h2>
 <p>One lightweight easy-to-use framework to build high performance web applications with 3 KB!<br />It uses modern JavaScript to be as light as possible and therefore only works on the latest version of modern browsers (e.g. Chrome, Firefox, Edge, Safari, Opera).</p>
 
@@ -25,11 +22,8 @@ import BrowserWindow from '@site/src/components/BrowserWindow';
 
 <h3>Support</h3>
 
-For questions and support please use the [GitHub Discussions](https://github.com/costrojs/costro/discussions). For bug report or feature request, please use the [issues on GitHub](https://github.com/costrojs/costro/issues).<br />Prs are also welcome!
+For questions and support please use the [GitHub Discussions](https://github.com/costrojs/costro/discussions). For bug report or feature request, please use the [issues on GitHub](https://github.com/costrojs/costro/issues).<br />Pull Requests are welcome!
 
 <h3>Used by</h3>
 
 - [Prisma Media](https://www.prismamedia.com)
-
-</BrowserWindow>
-```
