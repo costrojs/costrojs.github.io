@@ -4,9 +4,12 @@ title: Build web applications with Components, Store and Router
 hide_table_of_contents: true
 ---
 
-<p align="center">
-    <img src="../../svg/costro.svg" width="250" />
-</p>
+import CostroSvg from '@site/src/svgs/costro.svg';
+
+<div style={{ maxWidth: '250px', margin: '0 auto' }}>
+    <CostroSvg style={{ width: '100%' }} />
+</div>
+
 <h2>Build web applications with Components, Store and Router.</h2>
 <p>One lightweight easy-to-use framework to build high performance web applications with 3 KB!<br />It uses modern JavaScript to be as light as possible and therefore only works on the latest version of modern browsers (e.g. Chrome, Firefox, Edge, Safari, Opera).</p>
 

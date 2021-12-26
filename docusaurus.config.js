@@ -40,6 +40,7 @@ const config = {
 		]
 	],
 	themeConfig: {
+		image: 'img/costro-1280-bg.png',
 		metadata: [
 			{
 				name: 'keywords',
@@ -56,7 +57,7 @@ const config = {
 			},
 			{
 				name: 'description',
-				content: 'description custoù'
+				content: 'Build web applications with Components, Store and Router in 3KB'
 			}
 		],
 		tableOfContents: {
