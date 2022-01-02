@@ -28,3 +28,7 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 html[data-theme='dark'] .header-githubLink:before {
 	background: url('../svgs/github-white.svg') no-repeat;
 }
+
+.navbar__inner [class^='searchBox_node'] {
+	display: none;
+}
