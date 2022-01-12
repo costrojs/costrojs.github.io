@@ -130,9 +130,9 @@ const config = {
 			darkTheme: darkCodeTheme
 		},
 		algolia: {
-			appId: 'BH4D9OD16A',
-			apiKey: 'YOUR_SEARCH_API_KEY',
-			indexName: 'YOUR_INDEX_NAME',
+			appId: 'M3SOMQUNNZ',
+			apiKey: '9cb998f2a49b8cdffc9a7c1bd00a901e',
+			indexName: 'costro-js',
 			contextualSearch: true
 		}
 	}
