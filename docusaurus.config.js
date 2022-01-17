@@ -11,7 +11,7 @@ const config = {
 	organizationName: 'costrojs',
 	projectName: 'costro',
 	trailingSlash: false,
-	favicon: 'svg/costro-c-bg-round.svg',
+	favicon: 'img/favicon.ico',
 	presets: [
 		[
 			'@docusaurus/preset-classic',
