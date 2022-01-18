@@ -44,7 +44,7 @@ npm is the recommended installation method when building applications with Costr
 defaultValue="npm"
 values={[
 { label: 'npm', value: 'npm', },
-{ label: 'Yarn', value: 'yarn', }
+{ label: 'yarn', value: 'yarn', }
 ]
 }>
 <TabItem value="npm">
@@ -62,7 +62,3 @@ yarn add costro
 
 </TabItem>
 </Tabs>
-
-:::info
-System requirements: Node.js v12 or later.
-:::
