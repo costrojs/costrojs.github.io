@@ -55,7 +55,7 @@ yarn create costro-app my-app
 
 `create-costro-app` lets you create a new Costro app in seconds. It comes with the following features out of the box:
 
-- **100/100 Lighthouse score**: Templates optimized right out of the box ([See the Lighthouse report](/)).
+- **100/100 Lighthouse score**: Templates optimized right out of the box ([See the Lighthouse report](https://googlechrome.github.io/lighthouse/viewer?gist=2623d9bb018f1b7bb5fc58adb66d4d69)).
 - **Interactive experience**: Running `npx create-costro-app@latest` (with no arguments) launches an interactive experience that guides you through setting up a project.
 - **Zero dependencies**: Initializing a project is as quick as one second. Create Costro App has zero dependencies.
 - **Ready to use template**: The project contains webpack, Babel, postCSS, ESLint, Prettier, Jest, Browserslist and Autoprefixer.
