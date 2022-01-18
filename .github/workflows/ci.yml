@@ -38,3 +38,32 @@ jobs:
         with:
           name: docs
           path: build
+
+  deploy-docs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs: build
+    if: success() &&
+        github.ref == 'refs/heads/main' &&
+        github.repository == 'costrojs/costrojs.github.io' &&
+        github.event_name != 'pull_request'
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Download GitHub Pages artifacts
+        uses: actions/download-artifact@v1
+        with:
+          name: docs
+          # The path is mandatory with actions/download-artifact@v2
+          # https://github.com/actions/download-artifact#compatibility-between-v1-and-v2
+          path: build
+
+      - name: Deploy to Github Pages
+        uses: crazy-max/ghaction-github-pages@v1
+        with:
+          target_branch: docs
+          build_dir: build
+          keep_history: false
+          commit_message: "Deploy to GitHub pages"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
