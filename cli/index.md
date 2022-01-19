@@ -55,23 +55,23 @@ yarn create costro-app my-app
 
 `create-costro-app` lets you create a new Costro app in seconds. It comes with the following features out of the box:
 
-- **100/100 Lighthouse score**: Templates optimized right out of the box ([See the Lighthouse report](https://googlechrome.github.io/lighthouse/viewer?gist=2623d9bb018f1b7bb5fc58adb66d4d69)).
 - **Interactive experience**: Running `npx create-costro-app@latest` (with no arguments) launches an interactive experience that guides you through setting up a project.
+- **100/100 Lighthouse score**: Templates optimized right out of the box ([See the Lighthouse report](https://googlechrome.github.io/lighthouse/viewer?gist=2623d9bb018f1b7bb5fc58adb66d4d69)).
 - **Zero dependencies**: Initializing a project is as quick as one second. Create Costro App has zero dependencies.
-- **Ready to use template**: The project contains webpack, Babel, postCSS, ESLint, Prettier, Jest, Browserslist and Autoprefixer.
+- **Ready to use template**: The project contains [webpack](https://webpack.js.org), [Babel](https://babeljs.io), [postCSS](https://postcss.org), [ESLint](https://eslint.org), [Prettier](https://prettier.io), [Jest](https://jestjs.io) and [Browserslist](https://github.com/browserslist/browserslist).
 
 ## CLI options
 
 `create-costro-app` comes with the following options:
 
-```bash
-npx create-costro-app [<directory>] [--template <template-name>] [-h | --help] [-v | --version]
-```
+```txt
+Usage: create-costro-app <directory> [options]
 
-- `[<directory>]` - Target directory of the application.
-- `[--template <template-name>]` - Specify the template name ([see the list of templates](cli#templates)).
-- `[-h | --help]` - Show help for commands.
-- `[-v | --version]` - Show the `create-costro-app` CLI version.
+Options:
+  --template <name>  Specify the template name
+  -v, --version      Show the Create Costro App version
+  -h, --help         Display help for command
+```
 
 ## Templates
 
@@ -93,22 +93,45 @@ Name: `typescript`
 
 ## Available scripts
 
-- `npm install`
+### `npm install`
 
 Install the project dependencies.
 
-- `npm run dev`
+### `npm run dev`
 
 Runs the application in development mode. Open `http://localhost:3000` to view it in the browser. The page will reload if you make changes.
 
-- `npm run test`
+### `npm run test`
 
 Run Jest in the interactive watch mode.
 
-- `npm run link`
+### `npm run lint`
 
 Run linter with ESLint.
 
-- `npm run build`
+### `npm run build`
 
 Builds the application for production in the `build` folder. It bundles Costro into production mode and optimizes the build for the best performance. The build is minified and filenames include the hashes.
+
+## Browserslist
+
+By default, project templates include a [`browserslist`](https://github.com/browserslist/browserslist) configuration in your `package.json` with production and development support. Update it as needed.
+
+Here is an example of `browserslist` that is specified in the `package.json`:
+
+<!-- prettier-ignore -->
+```json
+"browserslist": {
+  "production": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "development": [
+    "last 1 chrome version",
+    "last 1 firefox version",
+    "last 1 safari version"
+  ]
+}
+```
