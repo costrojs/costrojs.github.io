@@ -37,6 +37,15 @@ const config = {
 				routeBasePath: 'tutorial',
 				sidebarPath: require.resolve('./sidebars/sidebar-tutorial.js')
 			}
+		],
+		[
+			'@docusaurus/plugin-content-docs',
+			{
+				id: 'cli',
+				path: 'cli',
+				routeBasePath: 'cli',
+				sidebarPath: require.resolve('./sidebars/sidebar-cli.js')
+			}
 		]
 	],
 	themeConfig: {
@@ -93,6 +102,11 @@ const config = {
 					to: 'tutorial',
 					position: 'left',
 					label: 'Tutorial'
+				},
+				{
+					to: 'cli',
+					position: 'left',
+					label: 'CLI'
 				},
 				{
 					type: 'dropdown',

@@ -1,5 +1,5 @@
 const sidebars = {
-	docs: [
+	tutorial: [
 		{
 			type: 'doc',
 			id: 'index',

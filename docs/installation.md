@@ -12,10 +12,6 @@ Costro can be integrated into a project in several ways depending on the needs.
 - Download the JavaScript files and host them yourself
 - Install it using npm
 
-:::caution
-Costro is currently available in the Release Candidate phase. Please send us feedback if you have any problems. The first public release will be released soon.
-:::
-
 ## CDN
 
 You can use Costro via the CDN links and a `<script>` tag.
@@ -44,7 +40,7 @@ npm is the recommended installation method when building applications with Costr
 defaultValue="npm"
 values={[
 { label: 'npm', value: 'npm', },
-{ label: 'Yarn', value: 'yarn', }
+{ label: 'yarn', value: 'yarn', }
 ]
 }>
 <TabItem value="npm">
@@ -62,7 +58,3 @@ yarn add costro
 
 </TabItem>
 </Tabs>
-
-:::info
-System requirements: Node.js v12 or later.
-:::
