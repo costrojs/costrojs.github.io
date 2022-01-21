@@ -61,7 +61,7 @@ yarn create costro-app my-app
 - **100/100 Lighthouse score**: Templates optimized right out of the box ([Lighthouse report](https://googlechrome.github.io/lighthouse/viewer?gist=2623d9bb018f1b7bb5fc58adb66d4d69)).
 - **No dependencies**: `create-costro-app` has no dependencies.
 - **Ready-to-use template**: The project contains [webpack](https://webpack.js.org), [Babel](https://babeljs.io), [postCSS](https://postcss.org), [ESLint](https://eslint.org), [Prettier](https://prettier.io), [Jest](https://jestjs.io) and [Browserslist](https://github.com/browserslist/browserslist).
-- **TypeScript support**: `create-costro-app` provides a [TypeScript template](#templates).
+- **TypeScript support**: `create-costro-app` provides a [TypeScript template](https://github.com/costrojs/costro-templates/tree/main/templates/typescript).
 
 ## CLI options
 
