@@ -22,6 +22,7 @@ type Options = {
   target: HTMLElement
   routes: RouteConfig[]
   mode: string
+  basePath: string
 };
 
 type RouteConfig = {
@@ -33,11 +34,12 @@ type RouteConfig = {
 
 **Parameters**
 
-| Parameter |      Type       | Description                                                                   |
-| --------- | :-------------: | ----------------------------------------------------------------------------- |
-| target    |  `HTMLElement`  | Unique `HTMLElement` to build the application.                                |
-| routes    | `RouteConfig[]` | [Route definition list](router#define-routes).                                |
-| mode      |    `string`     | [Router mode](router#history-mode) with `hash` or `history` (default `hash`). |
+| Parameter |      Type       | Default | Description                                                                                                                                       |
+| --------- | :-------------: | :-----: | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| target    |  `HTMLElement`  |   `-`   | Unique `HTMLElement` to build the application.                                                                                                    |
+| routes    | `RouteConfig[]` |   `-`   | [Route definition list](router#define-routes).                                                                                                    |
+| mode      |    `string`     | `hash`  | [Router mode](router#history-mode) with `hash` or `history`.                                                                                      |
+| basePath  |    `string`     |   `/`   | The base URL of the app. For example, if the entire single page application is served under `/app/`, then `basePath` should use the value `/app`. |
 
 **Example**
 
