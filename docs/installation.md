@@ -12,10 +12,6 @@ Costro can be integrated into a project in several ways depending on the needs.
 - Download the JavaScript files and host them yourself
 - Install it using npm
 
-:::caution
-Costro is currently available in the Release Candidate phase. Please send us feedback if you have any problems. The first public release will be released soon.
-:::
-
 ## CDN
 
 You can use Costro via the CDN links and a `<script>` tag.
