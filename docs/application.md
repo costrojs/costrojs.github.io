@@ -23,6 +23,7 @@ type Options = {
   routes: RouteConfig[]
   mode: string
   basePath: string
+  silentOnNotFound: boolean
 };
 
 type RouteConfig = {
@@ -34,12 +35,13 @@ type RouteConfig = {
 
 **Parameters**
 
-| Parameter |      Type       | Default | Description                                                                                                                                       |
-| --------- | :-------------: | :-----: | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| target    |  `HTMLElement`  |   `-`   | Unique `HTMLElement` to build the application.                                                                                                    |
-| routes    | `RouteConfig[]` |   `-`   | [Route definition list](router#define-routes).                                                                                                    |
-| mode      |    `string`     | `hash`  | [Router mode](router#history-mode) with `hash` or `history`.                                                                                      |
-| basePath  |    `string`     |   `/`   | The base URL of the app. For example, if the entire single page application is served under `/app/`, then `basePath` should use the value `/app`. |
+| Parameter        |      Type       | Default | Description                                                                                                                                                                         |
+| ---------------- | :-------------: | :-----: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| target           |  `HTMLElement`  |   `-`   | Unique `HTMLElement` to build the application.                                                                                                                                      |
+| routes           | `RouteConfig[]` |   `-`   | [Route definition list](router#define-routes).                                                                                                                                      |
+| mode             |    `string`     | `hash`  | [Router mode](router#history-mode) with `hash` or `history`.                                                                                                                        |
+| basePath         |    `string`     |   `/`   | The base URL of the app. For example, if the entire single page application is served under `/app/`, then `basePath` should use the value `/app`.                                   |
+| silentOnNotFound |    `Boolean`    | `false` | Tells the router to ignore unknown route changes and not delete the currently displayed route. If a [not found route](router#not-found-route) is declared, it will also be ignored. |
 
 **Example**
 

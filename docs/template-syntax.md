@@ -57,7 +57,7 @@ To further optimize the size of the generated file and pay homage to the [hypers
 - `createElement` => `h`
 - `Fragment` => `F`
 
-:::note
+:::info
 Costro is also compatible with the [jsx-dom](https://github.com/proteriax/jsx-dom) package with the [syntaxes](template-syntax#syntax) declared below.
 :::
 

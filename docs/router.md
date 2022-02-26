@@ -91,6 +91,10 @@ const routes = [
 ];
 ```
 
+:::info
+If the `silentOnNotFound` parameter is enabled, the not found route is ignored.
+:::
+
 Try it on [CodeSandbox](https://codesandbox.io/s/costro-not-found-g2quw).
 
 ## Navigation
