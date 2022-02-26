@@ -8,18 +8,6 @@ import TabItem from '@theme/TabItem';
 
 Welcome to the Costro tutorial. You'll learn a quick start guide and the most important concepts to easily start building quick web apps. You can also view the [Docs](/docs/installation) and the [Playground](/tutorial/playground).
 
-## What is Costro?
-
-Costro is a new lightweight framework with a different approach: helping you **build fast web applications** with a **low level of dependency**. If you are concerned about your app's loading performance, this library makes sense as it is extremely lightweight compared to the competition _(only 3 KB)_.
-
-Costro allows you to create components with store and a router in one lightweight easy-to-use package. It does not use virtual DOM because it is, by definition, slower than carefully crafted manual updates.
-
-**Motivation**
-
-1. Finding the framework that matches your needs without impacting web performance is not that easy these days. Popular librairies generally embed more and more code as the community and popularity increase.
-2. Single Web Applications do not benefit from page reloading to improve performance, so the JavaScript code embedded during the first load is heavier.
-3. In addition, we do not use 100% of the features included in the frontend frameworks and generally, the dependency part can be larger than the actual written code.
-
 ## Downloading Costro
 
 First, make sure you've installed [Node.js](https://nodejs.org/en/download). When you're ready, in a terminal, run:
