@@ -1,6 +1,6 @@
 # costro.js.org
 
-![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/costrojs/costrojs.github.io/ci.yml?branch=main&style=for-the-badge)
+![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/costrojs/costrojs.github.io/build.yml?branch=main&style=for-the-badge)
 
 ## Contribution guide
 
