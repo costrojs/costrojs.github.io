@@ -10,6 +10,5 @@ jobs:
     uses: yoriiis/actions/.github/workflows/github-pages-deploy.yml@main
     with:
       node-version: 18
-      command-build: npm run build
       build-dir: build
       target-branch: docs
