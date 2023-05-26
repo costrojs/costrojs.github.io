@@ -5,7 +5,7 @@
 		"build": "docusaurus build",
 		"clear": "docusaurus clear",
 		"start": "docusaurus start",
-		"test": "test:markdown",
+		"test": "npm run test:markdown",
 		"test:markdown": "markdownlint-cli2 '**/*.md'"
 	},
 	"browserslist": {
