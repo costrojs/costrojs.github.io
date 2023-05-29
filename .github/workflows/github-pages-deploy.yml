@@ -1,6 +1,7 @@
 name: Deploy to GitHub Pages
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -11,4 +12,3 @@ jobs:
     with:
       node-version: 18
       build-dir: build
-      target-branch: docs
