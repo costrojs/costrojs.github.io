@@ -21,7 +21,7 @@ import CostroSvg from '@site/src/svgs/costro.svg';
 - [**Lifecycle hooks**](docs/component#lifecycle-hooks) - Take advantage of component lifecycle events.
 - [**Props**](docs/component#props) - Inject props into components.
 - [**Template syntax**](docs/template-syntax) - Write your templates in a native Template String or in JSX.
-- [**JSX compiler**](docs/template-syntax#jsx-) - Transforms JSX syntax into valid DOM elements _(only 1KB)_.
+- [**JSX compiler**](docs/template-syntax#jsx-) - Transforms JSX syntax into valid DOM elements with `jsx-dom`.
 - [**CLI**](cli) - Create a new Costro app in seconds with an interactive experience.
 
 <h3>Support</h3>
