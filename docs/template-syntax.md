@@ -58,18 +58,10 @@ To further optimize the size of the generated file and pay homage to the [hypers
 - `Fragment` => `F`
 
 :::info
-Costro is also compatible with the [jsx-dom](https://github.com/proteriax/jsx-dom) package with the [syntaxes](template-syntax#syntax) declared below.
+Costro is also compatible with the [jsx-dom](https://github.com/proteriax/jsx-dom) package with the [syntaxes](template-syntax#attributes) declared below.
 :::
 
 Try it on [CodeSandbox](https://codesandbox.io/s/costro-jsx-template-k5zfs).
-
-**Import**
-
-Import the `costro/jsx` file when using JSX in templates _(only 1Kb)_.
-
-```jsx
-import { h, F } from 'costro/jsx';
-```
 
 <Tabs
 groupId="function-class-component"
