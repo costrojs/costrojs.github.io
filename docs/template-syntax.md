@@ -58,18 +58,10 @@ To further optimize the size of the generated file and pay homage to the [hypers
 - `Fragment` => `F`
 
 :::info
-Costro is also compatible with the [jsx-dom](https://github.com/proteriax/jsx-dom) package with the [syntaxes](template-syntax#syntax) declared below.
+Costro is also compatible with the [jsx-dom](https://github.com/proteriax/jsx-dom) package with the [syntaxes](template-syntax#attributes) declared below.
 :::
 
 Try it on [CodeSandbox](https://codesandbox.io/s/costro-jsx-template-k5zfs).
-
-**Import**
-
-Import the `costro/jsx` file when using JSX in templates _(only 1Kb)_.
-
-```jsx
-import { h, F } from 'costro/jsx';
-```
 
 <Tabs
 groupId="function-class-component"
@@ -182,27 +174,31 @@ Try it on [CodeSandbox](https://codesandbox.io/s/costro-svg-2ek63).
 
 #### Babel
 
-To transpile JSX, you need the Babel plugin `@babel/plugin-transform-react-jsx` that converts JSX to valid JavaScript code.
+To transpile JSX, you need the Babel preset `@babel/preset-react` that converts JSX to valid JavaScript code.
 
 ```bash
-npm install @babel/plugin-transform-react-jsx --save-dev
+npm install @babel/preset-react --save-dev
 ```
 
 Then, update the Babel configuration to register the plugin and the pragmas.
 
-```json title="babel.config.json" {6,7}
+```json title="babel.config.json"
 {
-  "plugins": [
+  "presets": [
     [
-      "@babel/plugin-transform-react-jsx",
+      "@babel/preset-react",
       {
-        "pragma": "h",
-        "pragmaFrag": "F"
+        "runtime": "automatic",
+        "importSource": "costro"
       }
     ]
   ]
 }
 ```
+
+:::info
+The automatic runtime automatically adds imports for `costro`. If you prefer the `classic` runtime environment, see the [Babel preset configuration](https://babeljs.io/docs/babel-preset-react#options)
+:::
 
 <details>
   <summary>Pragmas with CDN links</summary>
@@ -230,20 +226,19 @@ npm install eslint@7 eslint-plugin-react --save-dev
 
 When using ESLint and JSX outside of React/Preact, you needs to update the following rules.
 
-```json title=".eslintrc.json" {5,6,7,12,13,14}
+```json title=".eslintrc.json"
 {
   "extends": ["plugin:react/recommended"],
 
   "rules": {
     "react/display-name": 0,
     "react/jsx-key": 0,
-    "react/prop-types": 0
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": "off"
   },
 
   "settings": {
     "react": {
-      "pragma": "h",
-      "fragment": "F",
       "version": "0"
     }
   }
