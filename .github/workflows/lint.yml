@@ -16,5 +16,6 @@ jobs:
     uses: yoriiis/actions/.github/workflows/lint.yml@main
     with:
       eslint-status: false
-      stylelint-input: false
+      stylelint-status: false
       typescript-status: false
+      markdown-links: false
