@@ -22,9 +22,9 @@
 	},
 	"prettier": "./config/prettier.config.js",
 	"dependencies": {
-		"@docusaurus/core": "^2.4.1",
-		"@docusaurus/preset-classic": "^2.4.1",
-		"@docusaurus/theme-search-algolia": "^2.4.1",
+		"@docusaurus/core": "^3.4.0",
+		"@docusaurus/preset-classic": "^3.4.0",
+		"@docusaurus/theme-search-algolia": "^3.4.0",
 		"@mdx-js/react": "^1.6.21",
 		"@svgr/webpack": "^8.0.1",
 		"clsx": "^1.1.1",
