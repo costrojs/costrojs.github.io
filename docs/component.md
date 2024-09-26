@@ -90,6 +90,12 @@ class Home extends Component {
 }
 ```
 
+:::tip
+
+The `beforeRender()` method can be asynchronous to get data before rendering the component. This will delay the execution of the render method.
+
+:::
+
 ### After render
 
 The `afterRender()` method runs after the component output has been rendered to the DOM.
