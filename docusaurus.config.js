@@ -1,5 +1,6 @@
-const lightCodeTheme = require('prism-react-renderer/themes/palenight')
-const darkCodeTheme = require('prism-react-renderer/themes/dracula')
+const { themes } = require('prism-react-renderer')
+const lightCodeTheme = themes.palenight
+const darkCodeTheme = themes.dracula
 
 const config = {
 	title: 'Costro',
