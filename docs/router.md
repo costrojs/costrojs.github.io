@@ -62,7 +62,7 @@ const app = new App({
 
 Dynamic routes can be achieved by dynamic segments declared in the `path` of the route. Dynamic segments start with a colon. You can have multiple segments in the same route, and they will mapped to the corresponding fields on `this.route.params` in the component class.
 
-In addition to `this.route.params`, the `this.route` object also exposes other useful information such as `this.route.path` (current path in URL). You can see all the details in the [Component reference](component#Component-route-data).
+In addition to `this.route.params`, the `this.route` object also exposes other useful information such as `this.route.path` (current path in URL). You can see all the details in the [Component reference](component#route-data).
 
 ```js
 const routes = [
