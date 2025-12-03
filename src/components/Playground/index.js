@@ -5,7 +5,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react'
 import Link from '@docusaurus/Link'
 import codeSandboxImage from '@site/static/img/costro-codesandbox.jpg'
 
@@ -16,7 +15,7 @@ export function PlaygroundCardsRow() {
 				<div className="card">
 					<div className="card__image">
 						<Link to="https://codesandbox.io/s/costro-x8j4f">
-							<img src={codeSandboxImage} alt="CodeSandbox's image" />
+							<img src={codeSandboxImage} alt="CodeSandbox's website" />
 						</Link>
 					</div>
 					<div className="card__body">

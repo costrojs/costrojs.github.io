@@ -11,5 +11,3 @@ on:
 jobs:
   build:
     uses: yoriiis/actions/.github/workflows/test-and-build.yml@main
-    with:
-      node-version: 22

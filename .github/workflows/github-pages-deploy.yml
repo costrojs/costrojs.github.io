@@ -14,5 +14,4 @@ jobs:
       id-token: write
     uses: yoriiis/actions/.github/workflows/github-pages-deploy.yml@main
     with:
-      node-version: 22
       build-dir: build

@@ -8,11 +8,15 @@ const config = {
 	url: 'https://costro.js.org',
 	baseUrl: '/',
 	onBrokenLinks: 'throw',
-	onBrokenMarkdownLinks: 'warn',
 	organizationName: 'costrojs',
 	projectName: 'costro',
 	trailingSlash: false,
 	favicon: 'img/favicon.ico',
+	markdown: {
+		hooks: {
+			onBrokenMarkdownLinks: 'warn'
+		}
+	},
 	presets: [
 		[
 			'@docusaurus/preset-classic',

@@ -4,7 +4,7 @@ const sidebars = {
 			type: 'doc',
 			id: 'index',
 			label: 'Create Costro App'
-		},
+		}
 	]
 }
 

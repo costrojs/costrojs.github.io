@@ -15,6 +15,5 @@ jobs:
   lint:
     uses: yoriiis/actions/.github/workflows/lint.yml@main
     with:
-      node-version: 22
       typescript-status: false
       markdown-links: false

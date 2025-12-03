@@ -2,10 +2,12 @@
 	"name": "costro-docs",
 	"private": true,
 	"scripts": {
+		"biome:check": "biome check",
+		"biome:fix": "biome check --write",
 		"build": "docusaurus build",
 		"clear": "docusaurus clear",
 		"dev": "docusaurus start",
-		"test": "npm run test:markdown",
+		"test": "npm run test:markdown && npm run biome:check",
 		"test:markdown": "markdownlint-cli2 '**/*.md'"
 	},
 	"browserslist": {
@@ -21,18 +23,19 @@
 		]
 	},
 	"prettier": "./config/prettier.config.js",
-	"dependencies": {
+	"devDependencies": {
+		"@biomejs/biome": "^2.3.4",
 		"@docusaurus/core": "^3.9.2",
 		"@docusaurus/preset-classic": "^3.9.2",
 		"@docusaurus/theme-search-algolia": "^3.9.2",
-		"@mdx-js/react": "^3.1.0",
+		"@mdx-js/react": "^3.1.1",
 		"@svgr/webpack": "^8.0.1",
 		"clsx": "^2.1.1",
 		"file-loader": "^6.2.0",
-		"markdownlint-cli2": "^0.15.0",
-		"prism-react-renderer": "^2.4.0",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
+		"markdownlint-cli2": "^0.19.1",
+		"prism-react-renderer": "^2.4.1",
+		"react": "^19.2.0",
+		"react-dom": "^19.2.0",
 		"url-loader": "^4.1.1"
 	}
 }
